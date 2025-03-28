@@ -181,35 +181,31 @@
         display: none;
     }
 
-    /* Add a single book now button below locations */
-    .locations::after {
-        content: '';
+    /* Style the single book now button */
+    .quick-info .btn {
         display: block;
-        grid-column: 1 / -1;
-        text-align: center;
-        margin-top: 2rem;
-    }
-
-    .locations + .btn {
-        display: block;
-        width: 80%;
+        width: 90%;
         max-width: 300px;
-        margin: 0 auto;
+        margin: 2rem auto 0;
         background: var(--white);
         color: var(--primary-color);
         border: none;
-        padding: 1rem 2rem;
-        font-weight: 600;
+        padding: 1.2rem 2.5rem;
+        font-weight: 700;
+        font-size: 1.2rem;
         text-align: center;
-        border-radius: 5px;
+        border-radius: 50px;
         transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        text-transform: uppercase;
+        letter-spacing: 1px;
     }
 
-    .locations + .btn:hover {
+    .quick-info .btn:hover {
         background: var(--primary-color);
         color: var(--white);
-        transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(255, 0, 0, 0.3);
     }
 }
 
@@ -218,5 +214,11 @@
     .locations {
         grid-template-columns: 1fr;
         gap: 1rem;
+    }
+
+    .quick-info .btn {
+        width: 85%;
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
     }
 } 
