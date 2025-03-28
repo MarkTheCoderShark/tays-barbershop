@@ -40,6 +40,11 @@
     animation: rotate 4s linear infinite;
     transform-origin: center;
     display: inline-block;
+    background: linear-gradient(90deg, var(--white) 0%, var(--primary-color) 50%, var(--white) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 5px rgba(255, 0, 0, 0.3));
 }
 
 @keyframes rotate {
