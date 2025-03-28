@@ -128,24 +128,25 @@
 /* Mobile Responsive Styles */
 @media screen and (max-width: 768px) {
     .locations {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         padding: 1rem;
-        gap: 1.5rem;
+        gap: 1rem;
+        margin-bottom: 2rem;
     }
 
     .location {
-        padding: 2rem;
-        margin: 0 1rem;
+        padding: 1.5rem;
+        margin: 0;
         background: rgba(255, 255, 255, 0.15);
         border: 1px solid rgba(255, 255, 255, 0.2);
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     }
 
     .location h3 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         color: var(--white);
         text-shadow: none;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
     }
 
     .location h3::after {
@@ -153,8 +154,8 @@
     }
 
     .location p {
-        font-size: 1.1rem;
-        margin-bottom: 1.2rem;
+        font-size: 1rem;
+        margin-bottom: 0.8rem;
         color: var(--white);
         opacity: 0.95;
     }
@@ -162,6 +163,7 @@
     .location p i {
         color: var(--white);
         opacity: 0.9;
+        font-size: 1rem;
     }
 
     .location a {
@@ -174,18 +176,47 @@
         opacity: 0.8;
     }
 
+    /* Remove individual location buttons */
     .location .btn {
+        display: none;
+    }
+
+    /* Add a single book now button below locations */
+    .locations::after {
+        content: '';
+        display: block;
+        grid-column: 1 / -1;
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    .locations + .btn {
+        display: block;
+        width: 80%;
+        max-width: 300px;
+        margin: 0 auto;
         background: var(--white);
         color: var(--primary-color);
         border: none;
         padding: 1rem 2rem;
         font-weight: 600;
-        margin-top: 2rem;
+        text-align: center;
+        border-radius: 5px;
+        transition: all 0.3s ease;
     }
 
-    .location .btn:hover {
+    .locations + .btn:hover {
         background: var(--primary-color);
         color: var(--white);
         transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+    }
+}
+
+/* Additional breakpoint for very small screens */
+@media screen and (max-width: 480px) {
+    .locations {
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 } 
