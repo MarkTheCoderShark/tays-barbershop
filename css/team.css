@@ -156,6 +156,47 @@
     box-shadow: 0 5px 15px rgba(255, 0, 0, 0.2);
 }
 
+.featured-barber .barber-info {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.featured-barber .barber-info h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.featured-barber .barber-info .title {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.featured-barber .barber-info .instagram {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    background: rgba(255, 0, 0, 0.05);
+}
+
+.featured-barber .barber-info .instagram:hover {
+    background: rgba(255, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
 @media screen and (max-width: 768px) {
     .barber-card {
         padding: 1.5rem;
