@@ -144,4 +144,22 @@ function initMap() {
     });
 
     // Rancho Cordova location
-    const ranchoCordo
+    const ranchoCordova = { lat: 38.5897, lng: -121.3027 };
+    const ranchoCordovaMap = new google.maps.Map(document.getElementById('rancho-cordova-map'), {
+        zoom: 15,
+        center: ranchoCordova,
+        styles: mapStyles
+    });
+
+    new google.maps.Marker({
+        position: ranchoCordova,
+        map: ranchoCordovaMap,
+        title: "Tay's Barbershop - Rancho Cordova"
+    });
+}
+
+// Add Google Maps script
+const script = document.createElement('script');
+script.src = `https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap`;
+script.async = true;
+document.head.appendChild(script); 
