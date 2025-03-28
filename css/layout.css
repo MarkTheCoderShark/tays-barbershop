@@ -28,6 +28,25 @@
     text-decoration: none;
     z-index: 1001;
     text-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.logo i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    text-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+    animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .mobile-menu-btn {
@@ -119,6 +138,28 @@
 
     .logo {
         font-size: 1.5rem;
+    }
+    
+    .logo i {
+        font-size: 1.6rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero {
+        padding: 60px 15px 30px;
+    }
+
+    .hero-content {
+        padding: 1.5rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
     }
 }
 
