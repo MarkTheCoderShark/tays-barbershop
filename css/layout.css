@@ -188,7 +188,54 @@
 }
 
 /* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        padding: 80px 20px 40px;
+        background-attachment: scroll;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .hero-content {
+        padding: 2rem;
+        margin: 0;
+        width: 100%;
+        border-radius: 0;
+        background: rgba(0, 0, 0, 0.95);
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .cta-buttons .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
 @media screen and (max-width: 480px) {
+    .hero {
+        padding: 60px 15px 30px;
+    }
+
+    .hero-content {
+        padding: 1.5rem;
+    }
+
     .hero-content h1 {
         font-size: 2rem;
     }

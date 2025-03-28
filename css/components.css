@@ -3,6 +3,18 @@
     padding: 4rem 2rem;
     background-color: var(--accent-gray);
     color: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.quick-info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--red-dark), var(--red-light));
 }
 
 .locations {
@@ -11,6 +23,7 @@
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 2rem;
 }
 
 .location {
@@ -23,6 +36,24 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
     position: relative;
     overflow: hidden;
+    transform: translateY(0);
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.location:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .location::before {
@@ -39,8 +70,8 @@
 
 .location:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 40px rgba(0,0,0,0.2);
-    border-color: rgba(255,255,255,0.2);
+    box-shadow: 0 12px 40px rgba(255, 0, 0, 0.2);
+    border-color: rgba(255, 0, 0, 0.2);
 }
 
 .location:hover::before {
@@ -53,6 +84,7 @@
     font-size: 1.8rem;
     position: relative;
     display: inline-block;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
 }
 
 .location h3::after {
@@ -62,7 +94,7 @@
     left: 0;
     width: 50px;
     height: 2px;
-    background-color: var(--primary-color);
+    background: linear-gradient(90deg, var(--red-dark), var(--red-light));
 }
 
 .location p {
@@ -84,11 +116,35 @@
 .location .btn {
     margin-top: 1.5rem;
     transition: all 0.3s ease;
+    width: 100%;
+    text-align: center;
 }
 
 .location .btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    .locations {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+        gap: 1.5rem;
+    }
+
+    .location {
+        padding: 2rem;
+        margin: 0 1rem;
+    }
+
+    .location h3 {
+        font-size: 1.5rem;
+    }
+
+    .location p {
+        font-size: 1rem;
+    }
 }
 
 /* Meet Us Section */
@@ -255,6 +311,7 @@
 .contact {
     padding: 6rem 2rem;
     background: var(--white);
+    position: relative;
 }
 
 .contact .section-title {
@@ -271,31 +328,48 @@
 }
 
 .contact-info {
-    background: var(--accent-gray);
-    padding: 2rem;
-    border-radius: 10px;
-    color: var(--white);
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 0, 0, 0.1);
+    transform: translateY(0);
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.contact-info:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.contact-info:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(255, 0, 0, 0.2);
+    border-color: rgba(255, 0, 0, 0.2);
 }
 
 .contact-info h3 {
     color: var(--primary-color);
     margin-bottom: 1.5rem;
     font-size: 1.8rem;
-}
-
-.contact-details {
-    margin-bottom: 2rem;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
 }
 
 .contact-details p {
+    font-size: 1.1rem;
     margin-bottom: 1rem;
     display: flex;
     align-items: center;
+    color: var(--text-color);
 }
 
-.contact-details i {
+.contact-details p i {
     margin-right: 1rem;
     color: var(--primary-color);
+    font-size: 1.2rem;
+    width: 24px;
+    text-align: center;
 }
 
 .map {
