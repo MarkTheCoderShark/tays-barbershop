@@ -1,0 +1,102 @@
+/* Meet Us Section */
+.meet-us {
+    padding: 6rem 2rem;
+    background: var(--white);
+    text-align: center;
+}
+
+.barbers-grid {
+    max-width: 1200px;
+    margin: 3rem auto;
+}
+
+.featured-barber {
+    margin-bottom: 4rem;
+    position: relative;
+    padding-bottom: 3rem;
+}
+
+.featured-barber::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+.featured-barber .barber-image {
+    width: 250px;
+    height: 250px;
+}
+
+.barbers-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.barber-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.barber-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    overflow: hidden;
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.barber-image:hover {
+    transform: scale(1.05);
+}
+
+.barber-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.barber-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.barber-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.barber-info .title {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.barber-info .instagram {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.barber-info .btn {
+    margin-top: auto;
+    width: 100%;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+} 
