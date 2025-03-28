@@ -1,0 +1,11 @@
+{
+  "name": "tays-barbershop",
+  "version": "1.0.0",
+  "description": "Tay's Barbershop - Professional Cuts & Styles in Sacramento",
+  "scripts": {
+    "start": "serve ."
+  },
+  "dependencies": {
+    "serve": "^14.2.1"
+  }
+} 

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tay's Barbershop - Fresh Cuts, 7 Days a Week</title>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/components.css">
+    <link rel="stylesheet" href="/css/popup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Booking Popup -->
+    <div class="popup-overlay" id="booking-popup">
+        <div class="popup-content">
+            <span class="popup-close">&times;</span>
+            <h2 class="popup-title">Choose Your Location</h2>
+            <div class="location-buttons">
+                <a href="https://booksy.com/en-us/1032710_tays-barbershop-tahoe-park_barber-shop_134653_sacramento#ba_s=seo" class="location-button" target="_blank">
+                    <h3>Tahoe Park</h3>
+                    <p>2992 65th St, Sacramento</p>
+                </a>
+                <a href="https://booksy.com/en-us/1187946_taysbarbershop_barber-shop_119564_rancho-cordova#ba_s=seo" class="location-button" target="_blank">
+                    <h3>Rancho Cordova</h3>
+                    <p>1963 Zinfandel Dr, Rancho Cordova</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="#home" class="logo">Tay's Barbershop</a>
+        <div class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Fresh Cuts, 7 Days a Week</h1>
+            <p>Professional Cuts & Styles in Sacramento</p>
+            <div class="cta-buttons">
+                <a href="#booking" class="btn primary">Book Now</a>
+                <a href="#locations" class="btn secondary">Find a Location</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Info Section -->
+    <section class="quick-info" id="locations">
+        <div class="locations">
+            <div class="location">
+                <h3>Tahoe Park</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 2992 65th St, Sacramento, CA 95817</p>
+                <p><i class="fas fa-phone"></i> (916) 222-2003</p>
+                <p><i class="fas fa-clock"></i> Open 7 Days a Week</p>
+                <a href="#booking" class="btn primary">Book Now</a>
+            </div>
+            <div class="location">
+                <h3>Rancho Cordova</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 1963 Zinfandel Dr, Rancho Cordova, CA 95670</p>
+                <p><i class="fas fa-phone"></i> (916) 222-0169</p>
+                <p><i class="fas fa-clock"></i> Open 7 Days a Week</p>
+                <a href="#booking" class="btn primary">Book Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet Us Section -->
+    <section id="about" class="meet-us">
+        <h2 class="section-title dark">Meet Our Team</h2>
+        <div class="barbers-grid">
+            <div class="featured-barber">
+                <div class="barber-image">
+                    <img src="images/barber1.jpg" alt="Tay West">
+                </div>
+                <div class="barber-info">
+                    <h3>Tay West</h3>
+                    <p class="title">Owner</p>
+                    <a href="https://instagram.com/taywest_" class="instagram">@taywest_</a>
+                    <a href="#booking" class="btn primary">Book With Tay</a>
+                </div>
+            </div>
+            <div class="barbers-row">
+                <div class="barber-card">
+                    <div class="barber-image">
+                        <img src="images/barber2.jpg" alt="Barber Gene">
+                    </div>
+                    <div class="barber-info">
+                        <h3>Barber Gene</h3>
+                        <a href="https://instagram.com/" class="instagram">@instagram</a>
+                        <a href="#booking" class="btn primary">Book With Gene</a>
+                    </div>
+                </div>
+                <div class="barber-card">
+                    <div class="barber-image">
+                        <img src="images/barber3.jpg" alt="Barber Mark">
+                    </div>
+                    <div class="barber-info">
+                        <h3>Barber Mark</h3>
+                        <a href="https://instagram.com/" class="instagram">@instagram</a>
+                        <a href="#booking" class="btn primary">Book With Mark</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-cut"></i>
+                <h3>Classic Haircuts</h3>
+                <p>Professional cuts tailored to your style</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-wave-square"></i>
+                <h3>Skin Fades & Tapers</h3>
+                <p>Precision fades and clean tapers</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-user-tie"></i>
+                <h3>Beard Trims & Line-ups</h3>
+                <p>Expert beard grooming and sharp lines</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-hot-tub"></i>
+                <h3>Hot Towel Shaves</h3>
+                <p>Relaxing and refreshing shaves</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-child"></i>
+                <h3>Kids' Cuts</h3>
+                <p>Friendly service for the little ones</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-magic"></i>
+                <h3>Specialty Designs</h3>
+                <p>Custom designs and artistic cuts</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 class="section-title dark">Visit Us</h2>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>Tahoe Park</h3>
+                <div class="contact-details">
+                    <p><i class="fas fa-map-marker-alt"></i> 2992 65th St, Sacramento, CA 95817</p>
+                    <p><i class="fas fa-phone"></i> (916) 222-2003</p>
+                    <p><i class="fas fa-clock"></i> Open 7 Days a Week</p>
+                </div>
+            </div>
+            <div class="contact-info">
+                <h3>Rancho Cordova</h3>
+                <div class="contact-details">
+                    <p><i class="fas fa-map-marker-alt"></i> 1963 Zinfandel Dr, Rancho Cordova, CA 95670</p>
+                    <p><i class="fas fa-phone"></i> (916) 222-0169</p>
+                    <p><i class="fas fa-clock"></i> Open 7 Days a Week</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Tay's Barbershop</h3>
+                <p>Professional cuts and styles in Sacramento. Experience the best in men's grooming at our two convenient locations.</p>
+                <div class="social-links">
+                    <a href="https://instagram.com/taywest_" target="_blank"><i class="fab fa-instagram"></i> @taywest_</a>
+                    <a href="#" target="_blank"><i class="fab fa-facebook"></i> Tay's Barbershop</a>
+                    <a href="#" target="_blank"><i class="fab fa-yelp"></i> Review Us on Yelp</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+                <a href="#booking">Book Now</a>
+            </div>
+            <div class="footer-section">
+                <h3>Hours & Info</h3>
+                <p><i class="fas fa-clock"></i> Open 7 Days a Week</p>
+                <p><i class="fas fa-phone"></i> Tahoe Park: (916) 222-2003</p>
+                <p><i class="fas fa-phone"></i> Rancho Cordova: (916) 222-0169</p>
+                <a href="#booking" class="btn primary">Book Your Appointment</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Tay's Barbershop. All rights reserved. | Professional Cuts & Styles in Sacramento</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
