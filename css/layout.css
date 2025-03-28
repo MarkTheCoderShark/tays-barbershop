@@ -34,10 +34,12 @@
 }
 
 .logo i {
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: var(--primary-color);
     text-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
-    animation: rotate 3s linear infinite;
+    animation: rotate 4s linear infinite;
+    transform-origin: center;
+    display: inline-block;
 }
 
 @keyframes rotate {
@@ -141,7 +143,7 @@
     }
     
     .logo i {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
 }
 
