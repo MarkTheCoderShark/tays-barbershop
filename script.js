@@ -1,7 +1,7 @@
 // Loading Screen
 window.addEventListener('load', () => {
     const loadingScreen = document.querySelector('.loading-screen');
-    loadingScreen.classList.add('hidden');
+    loadingScreen.style.opacity = '0';
     setTimeout(() => {
         loadingScreen.style.display = 'none';
     }, 500);
@@ -30,16 +30,19 @@ document.addEventListener('DOMContentLoaded', () => {
         button.addEventListener('click', (e) => {
             e.preventDefault();
             popup.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
         });
     });
 
     closeBtn.addEventListener('click', () => {
         popup.style.display = 'none';
+        document.body.style.overflow = 'auto';
     });
 
     popup.addEventListener('click', (e) => {
         if (e.target === popup) {
             popup.style.display = 'none';
+            document.body.style.overflow = 'auto';
         }
     });
 
@@ -61,14 +64,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+            navLinks.classList.remove('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.classList.add('fa-bars');
+            icon.classList.remove('fa-times');
+        }
+    });
+
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            if (this.getAttribute('href') === '#booking') return;
             e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
         });
     });
 });
