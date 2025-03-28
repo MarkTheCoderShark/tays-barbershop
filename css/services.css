@@ -1,8 +1,11 @@
 /* Services Section */
 .services {
     padding: 6rem 2rem;
-    background: var(--white);
-    color: var(--secondary-color);
+    background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('/tays-barbershop/images/shop-interior.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--white);
 }
 
 .services .section-title {
@@ -19,18 +22,20 @@
 }
 
 .service-card {
-    background: var(--white);
+    background: rgba(255, 255, 255, 0.1);
     padding: 2.5rem;
     border-radius: 15px;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
-    border: 1px solid rgba(0,0,0,0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .service-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    border-color: rgba(255,255,255,0.2);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.2);
 }
 
 .service-card i {
@@ -42,11 +47,11 @@
 .service-card h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: var(--secondary-color);
+    color: var(--white);
 }
 
 .service-card p {
-    color: var(--text-color);
+    color: var(--light-gray);
     font-size: 1.1rem;
     line-height: 1.6;
 } 
