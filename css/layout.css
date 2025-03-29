@@ -263,14 +263,29 @@
 }
 
 @media screen and (max-width: 768px) {
+    .navbar {
+        padding: 0.8rem 1rem;
+        background-color: white;
+        justify-content: center;
+        position: relative;
+    }
+
+    .hero {
+        padding-top: 60px;
+        align-items: flex-start;
+        padding-bottom: 2rem;
+    }
+
     .hero-content {
+        margin-top: 2rem;
         padding: 2rem;
-        margin: 1rem;
         width: calc(100% - 2rem);
+        background: rgba(0, 0, 0, 0.7);
     }
 
     .hero-content h1 {
         font-size: 2.5rem;
+        margin-bottom: 1rem;
     }
 
     .hero-content p {
@@ -284,6 +299,27 @@
     .cta-buttons .btn {
         width: 100%;
         min-width: unset;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero {
+        padding-top: 40px;
+    }
+
+    .hero-content {
+        margin-top: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
     }
 }
 
