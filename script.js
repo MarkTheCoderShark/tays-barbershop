@@ -1,19 +1,21 @@
-// Loading Screen
+// Main initialization
 document.addEventListener('DOMContentLoaded', () => {
+    // Loading Screen
     const loadingScreen = document.querySelector('.loading-screen');
     if (loadingScreen) {
-        // Hide loading screen after a short delay to ensure content is ready
+        loadingScreen.classList.add('hidden');
         setTimeout(() => {
-            loadingScreen.style.opacity = '0';
-            setTimeout(() => {
-                loadingScreen.style.display = 'none';
-            }, 300);
+            loadingScreen.style.display = 'none';
         }, 500);
     }
+
+    // Initialize all other functionality
+    initializeNavigation();
+    initializeGallery();
 });
 
-// Booking Popup
-document.addEventListener('DOMContentLoaded', () => {
+// Navigation and Popup functionality
+function initializeNavigation() {
     const bookingPopup = document.getElementById('booking-popup');
     const yelpPopup = document.getElementById('yelp-popup');
     const closeButtons = document.querySelectorAll('.popup-close');
@@ -38,7 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             bookingPopup.style.display = 'flex';
             document.body.style.overflow = 'hidden';
-            // Close mobile menu if open
             if (navLinks.classList.contains('active')) {
                 navLinks.classList.remove('active');
             }
@@ -51,7 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             yelpPopup.style.display = 'flex';
             document.body.style.overflow = 'hidden';
-            // Close mobile menu if open
             if (navLinks.classList.contains('active')) {
                 navLinks.classList.remove('active');
             }
@@ -69,11 +69,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Close popup when clicking outside
     window.addEventListener('click', (e) => {
-        if (e.target === bookingPopup) {
+        if (e.target === bookingPopup || e.target === yelpPopup) {
             bookingPopup.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-        if (e.target === yelpPopup) {
             yelpPopup.style.display = 'none';
             document.body.style.overflow = 'auto';
         }
@@ -115,10 +112,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-});
+}
 
-// Gallery Carousel
-document.addEventListener('DOMContentLoaded', () => {
+// Gallery functionality
+function initializeGallery() {
     const galleryItems = document.querySelectorAll('.gallery-item');
     const prevBtn = document.querySelector('.prev-btn');
     const nextBtn = document.querySelector('.next-btn');
@@ -126,4 +123,127 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentIndex = 0;
     let isTransitioning = false;
 
+    if (!galleryItems.length) return;
+
     function showSlide(index) {
+        if (isTransitioning) return;
+        
+        isTransitioning = true;
+        
+        galleryItems.forEach(item => item.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        
+        currentIndex = index;
+        if (currentIndex >= galleryItems.length) currentIndex = 0;
+        if (currentIndex < 0) currentIndex = galleryItems.length - 1;
+
+        galleryItems[currentIndex].classList.add('active');
+        dots[currentIndex].classList.add('active');
+
+        setTimeout(() => {
+            isTransitioning = false;
+        }, 300);
+    }
+
+    // Initialize first slide
+    showSlide(0);
+
+    // Event listeners for navigation
+    if (prevBtn && nextBtn) {
+        nextBtn.addEventListener('click', () => showSlide(currentIndex + 1));
+        prevBtn.addEventListener('click', () => showSlide(currentIndex - 1));
+    }
+
+    // Event listeners for dots
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => showSlide(index));
+    });
+
+    // Auto-advance slides
+    let autoAdvanceInterval = setInterval(() => showSlide(currentIndex + 1), 5000);
+
+    // Pause auto-advance on hover
+    const galleryGrid = document.querySelector('.gallery-grid');
+    if (galleryGrid) {
+        galleryGrid.addEventListener('mouseenter', () => clearInterval(autoAdvanceInterval));
+        galleryGrid.addEventListener('mouseleave', () => {
+            autoAdvanceInterval = setInterval(() => showSlide(currentIndex + 1), 5000);
+        });
+    }
+}
+
+// Initialize Google Maps
+function initMap() {
+    const mapStyles = [
+        {
+            "featureType": "all",
+            "elementType": "geometry",
+            "stylers": [{"color": "#242f3e"}]
+        },
+        {
+            "featureType": "all",
+            "elementType": "labels.text.stroke",
+            "stylers": [{"lightness": -80}]
+        },
+        {
+            "featureType": "administrative",
+            "elementType": "labels.text.fill",
+            "stylers": [{"color": "#746855"}]
+        },
+        {
+            "featureType": "road",
+            "elementType": "geometry",
+            "stylers": [{"color": "#38414e"}]
+        },
+        {
+            "featureType": "road",
+            "elementType": "geometry.stroke",
+            "stylers": [{"color": "#212a37"}]
+        },
+        {
+            "featureType": "road",
+            "elementType": "labels.text.fill",
+            "stylers": [{"color": "#9ca5b3"}]
+        },
+        {
+            "featureType": "water",
+            "elementType": "geometry",
+            "stylers": [{"color": "#17263c"}]
+        }
+    ];
+
+    // Tahoe Park location
+    const tahoePark = { lat: 38.5502, lng: -121.4474 };
+    const tahoeParkMap = new google.maps.Map(document.getElementById('tahoe-park-map'), {
+        zoom: 15,
+        center: tahoePark,
+        styles: mapStyles
+    });
+
+    new google.maps.Marker({
+        position: tahoePark,
+        map: tahoeParkMap,
+        title: "Tay's Barbershop - Tahoe Park"
+    });
+
+    // Rancho Cordova location
+    const ranchoCordova = { lat: 38.5897, lng: -121.3027 };
+    const ranchoCordovaMap = new google.maps.Map(document.getElementById('rancho-cordova-map'), {
+        zoom: 15,
+        center: ranchoCordova,
+        styles: mapStyles
+    });
+
+    new google.maps.Marker({
+        position: ranchoCordova,
+        map: ranchoCordovaMap,
+        title: "Tay's Barbershop - Rancho Cordova"
+    });
+}
+
+// Add Google Maps script
+const script = document.createElement('script');
+script.src = `https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap`;
+script.async = true;
+document.head.appendChild(script); 
+document.head.appendChild(script); 
