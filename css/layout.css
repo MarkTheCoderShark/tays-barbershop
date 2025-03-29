@@ -11,6 +11,7 @@
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     transition: all 0.3s ease;
+    height: 80px;
 }
 
 .navbar.scrolled {
@@ -124,10 +125,11 @@
 /* Mobile Navigation */
 @media screen and (max-width: 768px) {
     .navbar {
-        padding: 0.8rem 1rem;
+        padding: 0.5rem 1rem;
         background-color: white;
         justify-content: center;
-        position: relative;
+        position: fixed;
+        height: 60px;
     }
 
     .logo {
@@ -135,7 +137,7 @@
     }
 
     .nav-logo {
-        height: 45px;
+        height: 40px;
         max-width: 150px;
     }
 
@@ -148,8 +150,20 @@
         background-color: rgba(255, 255, 255, 0.9);
     }
 
-    .mobile-menu-btn:hover {
-        background-color: rgba(255, 255, 255, 1);
+    .hero {
+        height: calc(100vh - 60px);
+        margin-top: 60px;
+        padding: 0;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .hero-content {
+        margin-top: 2rem;
+        padding: 1.5rem;
+        width: 100%;
+        border-radius: 0;
     }
 
     .nav-links {
@@ -204,20 +218,32 @@
 }
 
 @media screen and (max-width: 480px) {
+    .navbar {
+        height: 50px;
+    }
+
+    .nav-logo {
+        height: 35px;
+    }
+
     .hero {
-        padding: 60px 15px 30px;
+        height: calc(100vh - 50px);
+        margin-top: 50px;
     }
 
     .hero-content {
-        padding: 1.5rem;
+        margin-top: 1rem;
+        padding: 1rem;
     }
 
     .hero-content h1 {
         font-size: 2rem;
+        margin-bottom: 0.75rem;
     }
 
     .hero-content p {
         font-size: 1.1rem;
+        margin-bottom: 1.5rem;
     }
 }
 
