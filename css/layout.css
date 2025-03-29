@@ -98,6 +98,7 @@
     padding: 8px;
     border-radius: 4px;
     transition: all 0.3s ease;
+    background: transparent;
 }
 
 .mobile-menu-btn:hover {
@@ -106,19 +107,17 @@
 
 /* Mobile Navigation */
 @media screen and (max-width: 768px) {
+    .navbar {
+        padding: 0.8rem 1rem;
+        background-color: white;
+    }
+
     .mobile-menu-btn {
         display: block;
         position: absolute;
         right: 1rem;
-    }
-
-    .nav-logo {
-        height: 45px;
-        max-width: 150px;
-    }
-
-    .navbar.scrolled .nav-logo {
-        height: 40px;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     .nav-links {
@@ -127,35 +126,35 @@
         right: -100%;
         width: 100%;
         height: 100vh;
-        background-color: rgba(255, 255, 255, 0.98);
+        background-color: white;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         transition: right 0.3s ease;
         padding: 2rem;
-        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
-        gap: 1.5rem;
+        gap: 2rem;
     }
 
     .nav-links.active {
         right: 0;
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
     }
 
     .nav-links a {
-        margin: 0;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         width: 100%;
         text-align: center;
         padding: 1rem;
     }
 
     .nav-links a:hover {
-        background-color: rgba(255, 0, 0, 0.05);
-        border-radius: 5px;
+        background-color: var(--gray-light);
+        border-radius: 8px;
     }
 
-    .navbar {
-        padding: 0.8rem 1rem;
+    .nav-links .btn {
+        width: 200px;
+        margin-top: 1rem;
     }
 }
 
