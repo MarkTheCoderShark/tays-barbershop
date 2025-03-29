@@ -29,6 +29,9 @@
     height: 60px;
     width: auto;
     transition: all 0.3s ease;
+    filter: none;
+    object-fit: contain;
+    max-width: 200px;
 }
 
 .navbar.scrolled .nav-logo {
@@ -104,6 +107,7 @@
 
     .nav-logo {
         height: 45px;
+        max-width: 150px;
     }
 
     .navbar.scrolled .nav-logo {
