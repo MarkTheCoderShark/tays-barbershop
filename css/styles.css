@@ -1,14 +1,14 @@
 body, 
 .hero-section,
 #home {
-    background: #000000 !important;
-    background-color: #000000 !important;
-    background-image: none !important;
+    background: url('../images/shop-interior.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
 }
 
 .home-container,
 .main-content {
-    background: #000000 !important;
-    background-color: #000000 !important;
-    background-image: none !important;
+    background: transparent !important;
 } 
