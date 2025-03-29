@@ -173,7 +173,7 @@
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('../images/shop-interior.jpg');
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/shop-interior.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -194,7 +194,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(45deg, rgba(0,0,0,0.9), rgba(255,0,0,0.1));
+    background: linear-gradient(45deg, rgba(0,0,0,0.6), rgba(0,0,0,0.4));
     z-index: 1;
 }
 
