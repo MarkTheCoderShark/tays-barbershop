@@ -4,7 +4,7 @@
     top: 0;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.95);
-    padding: 1rem 2rem;
+    padding: 0.5rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,7 +15,7 @@
 
 .navbar.scrolled {
     background-color: rgba(0, 0, 0, 0.98);
-    padding: 0.8rem 2rem;
+    padding: 0.3rem 2rem;
     box-shadow: 0 2px 15px rgba(255, 0, 0, 0.3);
 }
 
@@ -368,4 +368,14 @@ footer::before {
 
 .contact-details {
     margin-top: 15px;
+}
+
+.nav-logo {
+    height: 50px;
+    width: auto;
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled .nav-logo {
+    height: 40px;
 } 
