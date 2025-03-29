@@ -300,13 +300,14 @@
     }
 
     .hero {
-        padding-top: 60px;
+        min-height: 100vh;
+        padding-top: 0;
         align-items: flex-start;
         padding-bottom: 2rem;
     }
 
     .hero-content {
-        margin-top: 2rem;
+        margin-top: 5rem;
         padding: 2rem;
         width: calc(100% - 2rem);
         background: rgba(0, 0, 0, 0.7);
@@ -333,11 +334,12 @@
 
 @media screen and (max-width: 480px) {
     .hero {
-        padding-top: 40px;
+        min-height: 100vh;
+        padding: 0;
     }
 
     .hero-content {
-        margin-top: 1.5rem;
+        margin-top: 4rem;
         padding: 1.5rem;
     }
 
