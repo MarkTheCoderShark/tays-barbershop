@@ -92,13 +92,18 @@
 .mobile-menu-btn {
     display: none;
     font-size: 1.8rem;
-    color: var(--primary-color);
+    color: black;
     cursor: pointer;
     z-index: 1001;
     padding: 8px;
     border-radius: 4px;
     transition: all 0.3s ease;
     background: transparent;
+}
+
+.mobile-menu-btn i {
+    display: block;
+    font-size: 24px;
 }
 
 .mobile-menu-btn:hover {
@@ -110,6 +115,17 @@
     .navbar {
         padding: 0.8rem 1rem;
         background-color: white;
+        justify-content: center;
+        position: relative;
+    }
+
+    .logo {
+        margin: 0 auto;
+    }
+
+    .nav-logo {
+        height: 45px;
+        max-width: 150px;
     }
 
     .mobile-menu-btn {
