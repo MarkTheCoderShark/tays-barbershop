@@ -1,8 +1,14 @@
 // Loading Screen
-window.addEventListener('load', () => {
+document.addEventListener('DOMContentLoaded', () => {
     const loadingScreen = document.querySelector('.loading-screen');
     if (loadingScreen) {
-        loadingScreen.style.display = 'none';
+        // Hide loading screen after a short delay to ensure content is ready
+        setTimeout(() => {
+            loadingScreen.style.opacity = '0';
+            setTimeout(() => {
+                loadingScreen.style.display = 'none';
+            }, 300);
+        }, 500);
     }
 });
 
@@ -144,4 +150,21 @@ function initMap() {
 
     // Rancho Cordova location
     const ranchoCordova = { lat: 38.5897, lng: -121.3027 };
-    c
+    const ranchoCordovaMap = new google.maps.Map(document.getElementById('rancho-cordova-map'), {
+        zoom: 15,
+        center: ranchoCordova,
+        styles: mapStyles
+    });
+
+    new google.maps.Marker({
+        position: ranchoCordova,
+        map: ranchoCordovaMap,
+        title: "Tay's Barbershop - Rancho Cordova"
+    });
+}
+
+// Add Google Maps script
+const script = document.createElement('script');
+script.src = `https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap`;
+script.async = true;
+document.head.appendChild(script); 
