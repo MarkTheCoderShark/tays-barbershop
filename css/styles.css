@@ -1,0 +1,14 @@
+body, 
+.hero-section,
+#home {
+    background: #000000 !important;
+    background-color: #000000 !important;
+    background-image: none !important;
+}
+
+.home-container,
+.main-content {
+    background: #000000 !important;
+    background-color: #000000 !important;
+    background-image: none !important;
+} 
