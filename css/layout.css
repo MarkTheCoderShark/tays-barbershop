@@ -345,4 +345,27 @@ footer::before {
     padding-top: 2rem;
     margin-top: 3rem;
     border-top: 1px solid rgba(255, 0, 0, 0.1);
+}
+
+.contact-info .location-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.contact-info .location-link:hover {
+    background: rgba(255, 0, 0, 0.05);
+    transform: translateY(-2px);
+}
+
+.contact-info .btn {
+    margin-top: 15px;
+    width: 100%;
+}
+
+.contact-details {
+    margin-top: 15px;
 } 
