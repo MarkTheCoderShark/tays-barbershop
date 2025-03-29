@@ -110,7 +110,7 @@
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     max-width: 1200px;
     margin: 0 auto;
@@ -119,7 +119,7 @@
 
 .service-card {
     background-color: var(--background-alt);
-    padding: 1.5rem;
+    padding: 1.25rem;
     border-radius: 12px;
     text-align: center;
     transition: all 0.3s ease;
@@ -129,8 +129,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    min-height: 200px;
+    justify-content: flex-start;
+    height: 160px;
 }
 
 .service-card::before {
@@ -156,9 +156,9 @@
 }
 
 .service-card i {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: var(--primary-color);
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     display: inline-block;
     transition: transform 0.3s ease;
 }
@@ -168,44 +168,41 @@
 }
 
 .service-card h3 {
-    font-size: 1.4rem;
-    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
     color: var(--secondary-color);
     font-weight: 600;
 }
 
 .service-card p {
     color: var(--text-light);
-    font-size: 1rem;
-    line-height: 1.4;
-    margin-bottom: 0;
-    max-width: 200px;
+    font-size: 0.9rem;
+    line-height: 1.3;
+    margin: 0;
+    max-width: 180px;
 }
 
 /* Mobile responsiveness for services */
 @media (max-width: 768px) {
     .services-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
     }
 
     .service-card {
-        padding: 1.25rem;
-        min-height: 180px;
+        height: 140px;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-grid {
+        grid-template-columns: 1fr;
     }
 
-    .service-card i {
-        font-size: 1.8rem;
-        margin-bottom: 0.75rem;
-    }
-
-    .service-card h3 {
-        font-size: 1.2rem;
-        margin-bottom: 0.5rem;
-    }
-
-    .service-card p {
-        font-size: 0.9rem;
+    .service-card {
+        height: auto;
+        min-height: 120px;
     }
 }
 
