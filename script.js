@@ -14,9 +14,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Booking Popup
 document.addEventListener('DOMContentLoaded', () => {
-    const popup = document.getElementById('booking-popup');
-    const closeBtn = document.querySelector('.popup-close');
-    const bookButtons = document.querySelectorAll('a[href="#booking"]');
+    const bookingPopup = document.getElementById('booking-popup');
+    const yelpPopup = document.getElementById('yelp-popup');
+    const closeButtons = document.querySelectorAll('.popup-close');
+    const bookButtons = document.querySelectorAll('a[href="#booking"], .nav-links .btn');
+    const yelpButtons = document.querySelectorAll('a[href="#yelp"]');
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
     const navbar = document.querySelector('.navbar');
@@ -34,19 +36,45 @@ document.addEventListener('DOMContentLoaded', () => {
     bookButtons.forEach(button => {
         button.addEventListener('click', (e) => {
             e.preventDefault();
-            popup.style.display = 'flex';
+            bookingPopup.style.display = 'flex';
             document.body.style.overflow = 'hidden';
+            // Close mobile menu if open
+            if (navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+            }
         });
     });
 
-    closeBtn.addEventListener('click', () => {
-        popup.style.display = 'none';
-        document.body.style.overflow = 'auto';
+    // Yelp popup functionality
+    yelpButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            yelpPopup.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+            // Close mobile menu if open
+            if (navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+            }
+        });
     });
 
-    popup.addEventListener('click', (e) => {
-        if (e.target === popup) {
-            popup.style.display = 'none';
+    // Close popup functionality
+    closeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            bookingPopup.style.display = 'none';
+            yelpPopup.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+    });
+
+    // Close popup when clicking outside
+    window.addEventListener('click', (e) => {
+        if (e.target === bookingPopup) {
+            bookingPopup.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        if (e.target === yelpPopup) {
+            yelpPopup.style.display = 'none';
             document.body.style.overflow = 'auto';
         }
     });
@@ -99,143 +127,3 @@ document.addEventListener('DOMContentLoaded', () => {
     let isTransitioning = false;
 
     function showSlide(index) {
-        if (isTransitioning) return;
-        
-        isTransitioning = true;
-        
-        galleryItems.forEach(item => item.classList.remove('active'));
-        dots.forEach(dot => dot.classList.remove('active'));
-        
-        currentIndex = index;
-        if (currentIndex >= galleryItems.length) currentIndex = 0;
-        if (currentIndex < 0) currentIndex = galleryItems.length - 1;
-
-        galleryItems[currentIndex].classList.add('active');
-        dots[currentIndex].classList.add('active');
-
-        // Reset transition lock after animation
-        setTimeout(() => {
-            isTransitioning = false;
-        }, 300);
-    }
-
-    // Event listeners for navigation buttons
-    nextBtn.addEventListener('click', () => {
-        if (!isTransitioning) {
-            showSlide(currentIndex + 1);
-        }
-    });
-
-    prevBtn.addEventListener('click', () => {
-        if (!isTransitioning) {
-            showSlide(currentIndex - 1);
-        }
-    });
-
-    // Event listeners for dots
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-            if (!isTransitioning && index !== currentIndex) {
-                showSlide(index);
-            }
-        });
-    });
-
-    // Optional: Auto-advance slides every 5 seconds
-    let autoAdvanceInterval = setInterval(() => {
-        if (!isTransitioning) {
-            showSlide(currentIndex + 1);
-        }
-    }, 5000);
-
-    // Pause auto-advance on hover
-    const galleryGrid = document.querySelector('.gallery-grid');
-    if (galleryGrid) {
-        galleryGrid.addEventListener('mouseenter', () => {
-            clearInterval(autoAdvanceInterval);
-        });
-
-        galleryGrid.addEventListener('mouseleave', () => {
-            autoAdvanceInterval = setInterval(() => {
-                if (!isTransitioning) {
-                    showSlide(currentIndex + 1);
-                }
-            }, 5000);
-        });
-    }
-});
-
-// Initialize Google Maps
-function initMap() {
-    const mapStyles = [
-        {
-            "featureType": "all",
-            "elementType": "geometry",
-            "stylers": [{"color": "#242f3e"}]
-        },
-        {
-            "featureType": "all",
-            "elementType": "labels.text.stroke",
-            "stylers": [{"lightness": -80}]
-        },
-        {
-            "featureType": "administrative",
-            "elementType": "labels.text.fill",
-            "stylers": [{"color": "#746855"}]
-        },
-        {
-            "featureType": "road",
-            "elementType": "geometry",
-            "stylers": [{"color": "#38414e"}]
-        },
-        {
-            "featureType": "road",
-            "elementType": "geometry.stroke",
-            "stylers": [{"color": "#212a37"}]
-        },
-        {
-            "featureType": "road",
-            "elementType": "labels.text.fill",
-            "stylers": [{"color": "#9ca5b3"}]
-        },
-        {
-            "featureType": "water",
-            "elementType": "geometry",
-            "stylers": [{"color": "#17263c"}]
-        }
-    ];
-
-    // Tahoe Park location
-    const tahoePark = { lat: 38.5502, lng: -121.4474 };
-    const tahoeParkMap = new google.maps.Map(document.getElementById('tahoe-park-map'), {
-        zoom: 15,
-        center: tahoePark,
-        styles: mapStyles
-    });
-
-    new google.maps.Marker({
-        position: tahoePark,
-        map: tahoeParkMap,
-        title: "Tay's Barbershop - Tahoe Park"
-    });
-
-    // Rancho Cordova location
-    const ranchoCordova = { lat: 38.5897, lng: -121.3027 };
-    const ranchoCordovaMap = new google.maps.Map(document.getElementById('rancho-cordova-map'), {
-        zoom: 15,
-        center: ranchoCordova,
-        styles: mapStyles
-    });
-
-    new google.maps.Marker({
-        position: ranchoCordova,
-        map: ranchoCordovaMap,
-        title: "Tay's Barbershop - Rancho Cordova"
-    });
-}
-
-// Add Google Maps script
-const script = document.createElement('script');
-script.src = `https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap`;
-script.async = true;
-document.head.appendChild(script); 

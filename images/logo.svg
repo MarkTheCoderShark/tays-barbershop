@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="200" viewBox="0 0 800 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <!-- Barber Pole Left -->
+    <g transform="translate(0,0)">
+        <path d="M80,20 C80,8.954305 71.045695,0 60,0 L20,0 C8.954305,0 0,8.954305 0,20 L0,180 C0,191.045695 8.954305,200 20,200 L60,200 C71.045695,200 80,191.045695 80,180 L80,20 Z" fill="#000000"/>
+        <path d="M10,30 L70,170" stroke="#FF0000" stroke-width="15"/>
+        <path d="M10,10 L70,150" stroke="#FFFFFF" stroke-width="15"/>
+        <path d="M10,50 L70,190" stroke="#0000FF" stroke-width="15"/>
+    </g>
+    
+    <!-- Straight Razor -->
+    <g transform="translate(150,50)">
+        <path d="M0,0 L200,0" stroke="#000000" stroke-width="20" stroke-linecap="round"/>
+        <circle cx="180" cy="0" r="5" fill="#000000"/>
+    </g>
+    
+    <!-- Tay's Text -->
+    <g transform="translate(250,30)">
+        <text x="100" y="80" font-family="cursive" font-size="100" fill="#000000">Tay's</text>
+    </g>
+    
+    <!-- Scissors -->
+    <g transform="translate(550,40)">
+        <path d="M0,0 L30,30" stroke="#FF0000" stroke-width="4"/>
+        <path d="M30,0 L0,30" stroke="#FF0000" stroke-width="4"/>
+    </g>
+    
+    <!-- BARBERSHOP Text -->
+    <text x="150" y="160" font-family="Arial" font-size="60" fill="#FF0000">BARBERSHOP</text>
+    
+    <!-- Barber Pole Right -->
+    <g transform="translate(720,0)">
+        <path d="M80,20 C80,8.954305 71.045695,0 60,0 L20,0 C8.954305,0 0,8.954305 0,20 L0,180 C0,191.045695 8.954305,200 20,200 L60,200 C71.045695,200 80,191.045695 80,180 L80,20 Z" fill="#000000"/>
+        <path d="M10,30 L70,170" stroke="#FF0000" stroke-width="15"/>
+        <path d="M10,10 L70,150" stroke="#FFFFFF" stroke-width="15"/>
+        <path d="M10,50 L70,190" stroke="#0000FF" stroke-width="15"/>
+    </g>
+</svg> 
