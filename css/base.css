@@ -170,11 +170,7 @@ section {
 
 /* Barber Shop Icon */
 .logo::before {
-    content: '✂️';
-    margin-right: 10px;
-    font-size: 1.2em;
-    vertical-align: middle;
-    display: inline-block;
+    content: none;
 }
 
 /* Loading Screen */
