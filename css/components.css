@@ -194,15 +194,17 @@
     border-radius: 12px;
     overflow: hidden;
     box-shadow: var(--shadow-md);
-    transition: all 0.3s ease;
+    transition: opacity 0.3s ease;
     aspect-ratio: 16/9;
     margin: 0 auto;
     max-width: 1200px;
     display: none;
+    opacity: 0;
 }
 
 .gallery-item.active {
     display: block;
+    opacity: 1;
 }
 
 .gallery-item img {
@@ -222,6 +224,7 @@
     justify-content: space-between;
     padding: 0 2rem;
     z-index: 2;
+    pointer-events: none;
 }
 
 .gallery-nav button {
@@ -238,6 +241,7 @@
     color: var(--primary-color);
     transition: all 0.3s ease;
     box-shadow: var(--shadow-md);
+    pointer-events: auto;
 }
 
 .gallery-nav button:hover {
@@ -251,6 +255,7 @@
     justify-content: center;
     gap: 1rem;
     margin-top: 2rem;
+    z-index: 2;
 }
 
 .gallery-dot {

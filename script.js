@@ -101,8 +101,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextBtn = document.querySelector('.next-btn');
     const dots = document.querySelectorAll('.gallery-dot');
     let currentIndex = 0;
+    let isTransitioning = false;
 
     function showSlide(index) {
+        if (isTransitioning) return;
+        
+        isTransitioning = true;
+        
         galleryItems.forEach(item => item.classList.remove('active'));
         dots.forEach(dot => dot.classList.remove('active'));
         
@@ -112,21 +117,57 @@ document.addEventListener('DOMContentLoaded', () => {
 
         galleryItems[currentIndex].classList.add('active');
         dots[currentIndex].classList.add('active');
+
+        // Reset transition lock after animation
+        setTimeout(() => {
+            isTransitioning = false;
+        }, 300);
     }
 
     // Event listeners for navigation buttons
-    nextBtn.addEventListener('click', () => showSlide(currentIndex + 1));
-    prevBtn.addEventListener('click', () => showSlide(currentIndex - 1));
+    nextBtn.addEventListener('click', () => {
+        if (!isTransitioning) {
+            showSlide(currentIndex + 1);
+        }
+    });
+
+    prevBtn.addEventListener('click', () => {
+        if (!isTransitioning) {
+            showSlide(currentIndex - 1);
+        }
+    });
 
     // Event listeners for dots
     dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => showSlide(index));
+        dot.addEventListener('click', () => {
+            if (!isTransitioning && index !== currentIndex) {
+                showSlide(index);
+            }
+        });
     });
 
     // Optional: Auto-advance slides every 5 seconds
-    setInterval(() => {
-        showSlide(currentIndex + 1);
+    let autoAdvanceInterval = setInterval(() => {
+        if (!isTransitioning) {
+            showSlide(currentIndex + 1);
+        }
     }, 5000);
+
+    // Pause auto-advance on hover
+    const galleryGrid = document.querySelector('.gallery-grid');
+    if (galleryGrid) {
+        galleryGrid.addEventListener('mouseenter', () => {
+            clearInterval(autoAdvanceInterval);
+        });
+
+        galleryGrid.addEventListener('mouseleave', () => {
+            autoAdvanceInterval = setInterval(() => {
+                if (!isTransitioning) {
+                    showSlide(currentIndex + 1);
+                }
+            }, 5000);
+        });
+    }
 });
 
 // Initialize Google Maps
