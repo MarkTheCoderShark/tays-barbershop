@@ -8,22 +8,22 @@
 /* Shared Component Styles */
 .section-title {
     text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
+    font-size: 2.8rem;
+    margin-bottom: 4rem;
     color: var(--secondary-color);
     position: relative;
-    display: inline-block;
+    padding-bottom: 1.5rem;
 }
 
 .section-title::after {
     content: '';
     position: absolute;
-    bottom: -10px;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 80px;
     height: 3px;
-    background: linear-gradient(90deg, var(--red-dark), var(--red-light));
+    background: var(--primary-color);
 }
 
 .btn {
@@ -48,7 +48,8 @@
 /* Responsive Design */
 @media (max-width: 768px) {
     .section-title {
-        font-size: 2rem;
+        font-size: 2.2rem;
+        margin-bottom: 3rem;
     }
 
     .btn {
@@ -92,47 +93,76 @@
 
 /* Services Section */
 .services {
-    background-color: var(--background-alt);
-    padding: 5rem 2rem;
+    background-color: var(--white);
+    padding: 6rem 2rem;
 }
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .service-card {
-    background-color: var(--white);
-    padding: 2rem;
-    border-radius: 10px;
+    background-color: var(--background-alt);
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
     text-align: center;
     transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--primary-color);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: left;
+}
+
+.service-card:hover::before {
+    transform: scaleX(1);
 }
 
 .service-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 .service-card i {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     color: var(--primary-color);
     margin-bottom: 1.5rem;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover i {
+    transform: scale(1.1);
 }
 
 .service-card h3 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin-bottom: 1rem;
     color: var(--secondary-color);
+    font-weight: 600;
 }
 
 .service-card p {
     color: var(--text-light);
     font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
 }
 
 /* Contact Section */

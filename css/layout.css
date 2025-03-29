@@ -169,7 +169,7 @@
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/shop-interior.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('../images/shop-interior.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -177,83 +177,74 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: var(--white);
-    padding-top: 60px;
-    position: relative;
-    overflow: hidden;
-}
-
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(45deg, rgba(0,0,0,0.6), rgba(0,0,0,0.4));
-    z-index: 1;
+    padding-top: 80px;
 }
 
 .hero-content {
-    background: rgba(0, 0, 0, 0.9);
+    max-width: 800px;
     padding: 3rem;
-    border-radius: 10px;
-    backdrop-filter: blur(5px);
-    box-shadow: 0 0 30px rgba(255, 0, 0, 0.2);
-    position: relative;
-    z-index: 2;
-    max-width: 90%;
-    width: 600px;
-    margin: 0 auto;
-    border: 1px solid rgba(255, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
 }
 
 .hero-content h1 {
     font-size: 3.5rem;
-    margin-bottom: 1rem;
+    color: var(--white);
+    margin-bottom: 1.5rem;
     text-transform: uppercase;
-    letter-spacing: 3px;
-    line-height: 1.2;
-    text-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero-content p {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    color: var(--white);
     margin-bottom: 2rem;
-    color: var(--light-gray);
-    line-height: 1.4;
+    font-weight: 400;
+    opacity: 0.9;
 }
 
 .cta-buttons {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
     justify-content: center;
-    flex-wrap: wrap;
 }
 
-/* Mobile Responsive Styles */
-@media screen and (max-width: 768px) {
-    .hero {
-        height: auto;
-        min-height: 100vh;
-        padding: 80px 20px 40px;
-        background-attachment: scroll;
-        background-position: center;
-        background-size: cover;
-    }
+.cta-buttons .btn {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    min-width: 180px;
+}
 
+.cta-buttons .btn.primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+}
+
+.cta-buttons .btn.secondary {
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.cta-buttons .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 768px) {
     .hero-content {
         padding: 2rem;
-        margin: 0;
-        width: 100%;
-        border-radius: 0;
-        background: rgba(0, 0, 0, 0.95);
-        box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+        margin: 1rem;
+        width: calc(100% - 2rem);
     }
 
     .hero-content h1 {
         font-size: 2.5rem;
-        letter-spacing: 2px;
     }
 
     .hero-content p {
@@ -262,30 +253,11 @@
 
     .cta-buttons {
         flex-direction: column;
-        gap: 1rem;
     }
 
     .cta-buttons .btn {
         width: 100%;
-        text-align: center;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .hero {
-        padding: 60px 15px 30px;
-    }
-
-    .hero-content {
-        padding: 1.5rem;
-    }
-
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-
-    .hero-content p {
-        font-size: 1.1rem;
+        min-width: unset;
     }
 }
 
