@@ -11,7 +11,6 @@
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     transition: all 0.3s ease;
-    height: 80px;
 }
 
 .navbar.scrolled {
@@ -128,8 +127,7 @@
         padding: 0.5rem 1rem;
         background-color: white;
         justify-content: center;
-        position: fixed;
-        height: 60px;
+        height: auto;
     }
 
     .logo {
@@ -151,89 +149,31 @@
     }
 
     .hero {
-        height: calc(100vh - 60px);
-        margin-top: 60px;
-        padding: 0;
+        padding-top: 60px;
+        min-height: 100vh;
         display: flex;
         align-items: flex-start;
-        justify-content: flex-start;
     }
 
     .hero-content {
-        margin-top: 2rem;
         padding: 1.5rem;
         width: 100%;
-        border-radius: 0;
-    }
-
-    .nav-links {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 100%;
-        height: 100vh;
-        background-color: rgba(0, 0, 0, 0.95);
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        transition: right 0.3s ease;
-        padding: 6rem 2rem 2rem;
-        gap: 2.5rem;
-    }
-
-    .nav-links.active {
-        right: 0;
-        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.3);
-    }
-
-    .nav-links a {
-        font-size: 1.8rem;
-        width: 100%;
-        text-align: center;
-        padding: 0.75rem;
-        color: white;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
-
-    .nav-links a:hover {
-        background-color: rgba(255, 255, 255, 0.1);
-        border-radius: 8px;
-        color: var(--primary-color);
-    }
-
-    .nav-links .btn {
-        width: 200px;
         margin-top: 1rem;
-        background-color: var(--primary-color);
-        color: white;
-        border: none;
-    }
-
-    .nav-links .btn:hover {
-        background-color: #cc0000;
-        transform: translateY(-2px);
     }
 }
 
 @media screen and (max-width: 480px) {
-    .navbar {
-        height: 50px;
-    }
-
     .nav-logo {
         height: 35px;
     }
 
     .hero {
-        height: calc(100vh - 50px);
-        margin-top: 50px;
+        padding-top: 50px;
     }
 
     .hero-content {
-        margin-top: 1rem;
         padding: 1rem;
+        margin-top: 0;
     }
 
     .hero-content h1 {
