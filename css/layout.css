@@ -6,7 +6,7 @@
     background-color: rgba(0, 0, 0, 0.95);
     padding: 1rem 2rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     box-shadow: 0 2px 10px rgba(255, 0, 0, 0.2);
     z-index: 1000;
@@ -17,16 +17,6 @@
     background-color: rgba(0, 0, 0, 0.98);
     padding: 0.8rem 2rem;
     box-shadow: 0 2px 15px rgba(255, 0, 0, 0.3);
-}
-
-.logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: var(--white);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-decoration: none;
-    text-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
 }
 
 .mobile-menu-btn {
@@ -74,6 +64,8 @@
 @media screen and (max-width: 768px) {
     .mobile-menu-btn {
         display: block;
+        position: absolute;
+        right: 1rem;
     }
 
     .nav-links {
@@ -114,10 +106,7 @@
 
     .navbar {
         padding: 1rem;
-    }
-
-    .logo {
-        font-size: 1.5rem;
+        justify-content: center;
     }
 }
 
