@@ -8,19 +8,25 @@
         <path d="M10,50 L70,190" stroke="#0000FF" stroke-width="15"/>
     </g>
     
+    <!-- Straight Razor -->
+    <g transform="translate(150,50)">
+        <path d="M0,0 L200,0" stroke="#000000" stroke-width="20" stroke-linecap="round"/>
+        <circle cx="180" cy="0" r="5" fill="#000000"/>
+    </g>
+    
     <!-- Tay's Text -->
-    <g transform="translate(150,30)">
-        <text x="100" y="100" font-family="cursive" font-size="120" fill="#FFFFFF" stroke="#000000" stroke-width="2">Tay's</text>
+    <g transform="translate(250,30)">
+        <text x="100" y="80" font-family="cursive" font-size="100" fill="#000000">Tay's</text>
     </g>
     
     <!-- Scissors -->
-    <g transform="translate(500,60)">
-        <path d="M0,0 L40,40" stroke="#FF0000" stroke-width="4"/>
-        <circle cx="20" cy="20" r="5" fill="#FF0000"/>
+    <g transform="translate(550,40)">
+        <path d="M0,0 L30,30" stroke="#FF0000" stroke-width="4"/>
+        <path d="M30,0 L0,30" stroke="#FF0000" stroke-width="4"/>
     </g>
     
     <!-- BARBERSHOP Text -->
-    <text x="150" y="180" font-family="Arial" font-size="60" fill="#FF0000">BARBERSHOP</text>
+    <text x="150" y="160" font-family="Arial" font-size="60" fill="#FF0000">BARBERSHOP</text>
     
     <!-- Barber Pole Right -->
     <g transform="translate(720,0)">

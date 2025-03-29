@@ -4,7 +4,7 @@
     top: 0;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.95);
-    padding: 0.5rem 2rem;
+    padding: 0.8rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,7 +15,7 @@
 
 .navbar.scrolled {
     background-color: rgba(0, 0, 0, 0.98);
-    padding: 0.3rem 2rem;
+    padding: 0.5rem 2rem;
     box-shadow: 0 2px 15px rgba(255, 0, 0, 0.3);
 }
 
@@ -371,19 +371,21 @@ footer::before {
 }
 
 .nav-logo {
-    height: 60px;
+    height: 70px;
     width: auto;
     transition: all 0.3s ease;
-    filter: drop-shadow(0 0 5px rgba(255, 0, 0, 0.3));
+    filter: drop-shadow(0 0 5px rgba(255, 0, 0, 0.2));
+    margin-right: 20px;
 }
 
 .navbar.scrolled .nav-logo {
-    height: 50px;
+    height: 55px;
 }
 
 @media screen and (max-width: 768px) {
     .nav-logo {
         height: 50px;
+        margin-right: 10px;
     }
     
     .navbar.scrolled .nav-logo {
