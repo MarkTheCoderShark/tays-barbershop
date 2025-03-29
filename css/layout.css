@@ -4,7 +4,7 @@
     top: 0;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.95);
-    padding: 0.8rem 2rem;
+    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,7 +15,7 @@
 
 .navbar.scrolled {
     background-color: rgba(0, 0, 0, 0.98);
-    padding: 0.5rem 2rem;
+    padding: 0.8rem 2rem;
     box-shadow: 0 2px 15px rgba(255, 0, 0, 0.3);
 }
 
@@ -26,34 +26,7 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     text-decoration: none;
-    z-index: 1001;
     text-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-}
-
-.logo i {
-    font-size: 2.2rem;
-    color: var(--primary-color);
-    text-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
-    animation: rotate 4s linear infinite;
-    transform-origin: center;
-    display: inline-block;
-    background: linear-gradient(90deg, var(--white) 0%, var(--primary-color) 50%, var(--white) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 0 5px rgba(255, 0, 0, 0.3));
-}
-
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
 }
 
 .mobile-menu-btn {
@@ -145,10 +118,6 @@
 
     .logo {
         font-size: 1.5rem;
-    }
-    
-    .logo i {
-        font-size: 1.8rem;
     }
 }
 

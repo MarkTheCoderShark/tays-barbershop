@@ -20,16 +20,4 @@
       "src": "/images/(.*)",
       "headers": { 
         "cache-control": "public, max-age=31536000, immutable",
-        "access-control-allow-origin": "*"
-      },
-      "dest": "/images/$1"
-    },
-    {
-      "src": "/(.*)",
-      "headers": {
-        "access-control-allow-origin": "*"
-      },
-      "dest": "/$1"
-    }
-  ]
-} 
+        "a
