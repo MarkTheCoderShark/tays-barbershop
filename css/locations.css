@@ -184,4 +184,96 @@
     .location h3 {
         font-size: 1.3rem;
         color: var(--white);
-        te
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        margin-bottom: 1rem;
+        font-weight: 700;
+    }
+
+    .location h3::after {
+        background: var(--white);
+        height: 3px;
+    }
+
+    .location p {
+        font-size: 1rem;
+        margin-bottom: 0.8rem;
+        color: var(--white);
+        opacity: 1;
+        font-weight: 500;
+    }
+
+    .location p i {
+        color: var(--white);
+        opacity: 1;
+        font-size: 1.1rem;
+        width: 20px;
+    }
+
+    .location a {
+        color: var(--white);
+        text-decoration: none;
+        transition: opacity 0.3s ease;
+        font-weight: 500;
+    }
+
+    .location a:hover {
+        opacity: 0.8;
+    }
+
+    /* Remove individual location buttons */
+    .location .btn {
+        display: none;
+    }
+
+    /* Style the single book now button */
+    .quick-info .btn {
+        display: block;
+        width: 90%;
+        max-width: 300px;
+        margin: 2rem auto 0;
+        background: var(--white);
+        color: var(--primary-color);
+        border: none;
+        padding: 1.2rem 2.5rem;
+        font-weight: 700;
+        font-size: 1.2rem;
+        text-align: center;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .quick-info .btn:hover {
+        background: var(--primary-color);
+        color: var(--white);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(255, 0, 0, 0.3);
+    }
+}
+
+/* Additional breakpoint for very small screens */
+@media screen and (max-width: 480px) {
+    .quick-info h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .locations {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .location {
+        padding: 2rem;
+    }
+
+    .quick-info .btn {
+        width: 85%;
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+    }
+} 
