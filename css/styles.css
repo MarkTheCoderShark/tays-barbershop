@@ -1,7 +1,7 @@
 body, 
 .hero-section,
 #home {
-    background: url('../images/shopinterior1_optimized.jpg') !important;
+    background: url('../images/shopinterior1_optimized.jpg?v=2') !important;
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
