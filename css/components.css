@@ -61,7 +61,7 @@
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/shop-interior.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/shopinterior1_optimized.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -69,26 +69,62 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding-top: 80px;
 }
 
 .hero-content {
     max-width: 800px;
-    padding: 2rem;
+    padding: 3rem;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
 }
 
-.hero h1 {
-    font-size: 4rem;
+.hero-content h1 {
+    font-size: 3.5rem;
     color: var(--white);
     margin-bottom: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 2px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.hero p {
-    font-size: 1.5rem;
+.hero-content p {
+    font-size: 1.4rem;
     color: var(--white);
     margin-bottom: 2rem;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.cta-buttons .btn {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    min-width: 180px;
+}
+
+.cta-buttons .btn.primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+}
+
+.cta-buttons .btn.secondary {
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.cta-buttons .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Services Section */
