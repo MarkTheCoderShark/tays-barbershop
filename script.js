@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize all other functionality
     initializeNavigation();
-    initializeGallery();
 });
 
 // Navigation and Popup functionality
@@ -112,64 +111,6 @@ function initializeNavigation() {
             }
         });
     });
-}
-
-// Gallery functionality
-function initializeGallery() {
-    const galleryItems = document.querySelectorAll('.gallery-item');
-    const prevBtn = document.querySelector('.prev-btn');
-    const nextBtn = document.querySelector('.next-btn');
-    const dots = document.querySelectorAll('.gallery-dot');
-    let currentIndex = 0;
-    let isTransitioning = false;
-
-    if (!galleryItems.length) return;
-
-    function showSlide(index) {
-        if (isTransitioning) return;
-        
-        isTransitioning = true;
-        
-        galleryItems.forEach(item => item.classList.remove('active'));
-        dots.forEach(dot => dot.classList.remove('active'));
-        
-        currentIndex = index;
-        if (currentIndex >= galleryItems.length) currentIndex = 0;
-        if (currentIndex < 0) currentIndex = galleryItems.length - 1;
-
-        galleryItems[currentIndex].classList.add('active');
-        dots[currentIndex].classList.add('active');
-
-        setTimeout(() => {
-            isTransitioning = false;
-        }, 300);
-    }
-
-    // Initialize first slide
-    showSlide(0);
-
-    // Event listeners for navigation
-    if (prevBtn && nextBtn) {
-        nextBtn.addEventListener('click', () => showSlide(currentIndex + 1));
-        prevBtn.addEventListener('click', () => showSlide(currentIndex - 1));
-    }
-
-    // Event listeners for dots
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => showSlide(index));
-    });
-
-    // Auto-advance slides
-    let autoAdvanceInterval = setInterval(() => showSlide(currentIndex + 1), 5000);
-
-    // Pause auto-advance on hover
-    const galleryGrid = document.querySelector('.gallery-grid');
-    if (galleryGrid) {
-        galleryGrid.addEventListener('mouseenter', () => clearInterval(autoAdvanceInterval));
-        galleryGrid.addEventListener('mouseleave', () => {
-            autoAdvanceInterval = setInterval(() => showSlide(currentIndex + 1), 5000);
-        });
-    }
 }
 
 // Initialize Google Maps

@@ -214,90 +214,49 @@
 }
 
 .gallery-grid {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
-    position: relative;
-    overflow: hidden;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
 }
 
 .gallery-item {
-    width: 100%;
     position: relative;
-    display: none;
     aspect-ratio: 3/4;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-.gallery-item.active {
-    display: block;
+.gallery-item:hover {
+    transform: scale(1.02);
 }
 
 .gallery-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 8px;
+    transition: transform 0.3s ease;
 }
 
-.gallery-nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 1rem;
-    z-index: 2;
-}
-
-.gallery-nav button {
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-}
-
-.gallery-nav button:hover {
-    background-color: #cc0000;
-    transform: scale(1.1);
-}
-
-.gallery-dots {
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-    margin-top: 1rem;
-}
-
-.gallery-dots span {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #ccc;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.gallery-dots span.active {
-    background-color: var(--primary-color);
-    transform: scale(1.2);
+.gallery-item:hover img {
+    transform: scale(1.05);
 }
 
 @media screen and (max-width: 768px) {
     .gallery-grid {
-        max-width: 100%;
-        padding: 0 1rem;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1rem;
     }
-    
-    .gallery-nav button {
-        width: 35px;
-        height: 35px;
+}
+
+@media screen and (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 0.75rem;
     }
 }
 
