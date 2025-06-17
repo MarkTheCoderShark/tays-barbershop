@@ -36,6 +36,12 @@
     opacity: 0.8;
 }
 
+/* White text for services section description */
+.services .section-description {
+    color: var(--white);
+    opacity: 0.9;
+}
+
 .hero-subtitle {
     font-size: 1.4rem;
     color: var(--white);
