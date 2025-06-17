@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    
+    <!-- Homepage -->
+    <url>
+        <loc>https://taysbarbershop.com/</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://taysbarbershop.com/images/logo2_optimized.png</image:loc>
+            <image:title>Tay's Barbershop Logo</image:title>
+            <image:caption>Professional barbershop logo for Tay's Barbershop in Sacramento</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://taysbarbershop.com/images/barbershoppic1_optimized.png</image:loc>
+            <image:title>Tay's Barbershop Interior</image:title>
+            <image:caption>Modern barbershop interior at Tay's Barbershop</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- Locations Section -->
+    <url>
+        <loc>https://taysbarbershop.com/#our-locations</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Sacramento Location -->
+    <url>
+        <loc>https://taysbarbershop.com/locations/sacramento</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Rancho Cordova Location -->
+    <url>
+        <loc>https://taysbarbershop.com/locations/rancho-cordova</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Services Section -->
+    <url>
+        <loc>https://taysbarbershop.com/#services</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Gallery Section -->
+    <url>
+        <loc>https://taysbarbershop.com/#gallery</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://taysbarbershop.com/images/IMG_2543_optimized.JPG</image:loc>
+            <image:title>Barbershop Interior View</image:title>
+            <image:caption>Professional barbershop setup and equipment</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://taysbarbershop.com/images/_DSF5391_optimized.jpg</image:loc>
+            <image:title>Barbershop Professional Equipment</image:title>
+            <image:caption>High-end barbering tools and station setup</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- Service Pages -->
+    <url>
+        <loc>https://taysbarbershop.com/services/haircuts</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://taysbarbershop.com/services/fades</loc>
+        <lastmod>2024-12-19</lastmod>  
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://taysbarbershop.com/services/beard-trims</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://taysbarbershop.com/services/hot-towel-shaves</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://taysbarbershop.com/services/kids-cuts</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://taysbarbershop.com/services/specialty-designs</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+</urlset> 

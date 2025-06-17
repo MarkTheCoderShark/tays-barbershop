@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Block access to admin or private areas (if any in future)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /_*
+
+# Allow all images for better SEO
+Allow: /images/
+Allow: /css/
+Allow: /js/
+
+# Sitemap location
+Sitemap: https://taysbarbershop.com/sitemap.xml
+
+# Crawl-delay (optional, helps prevent server overload)
+Crawl-delay: 1 
