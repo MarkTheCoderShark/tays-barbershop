@@ -276,4 +276,472 @@
         padding: 1rem 2rem;
         font-size: 1.1rem;
     }
+}
+
+/* Location Pages Specific Styles */
+
+.location-hero {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: white;
+    padding: 120px 20px 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.location-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../images/barbershoppic1_optimized.png') center/cover;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.location-hero .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.location-hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.location-hero .hero-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+.location-hero .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Location Details Section */
+.location-details {
+    padding: 80px 20px;
+    background: #f8f9fa;
+}
+
+.location-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.location-info h2 {
+    color: #1a1a1a;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.location-info h3 {
+    color: #d4af37;
+    font-size: 1.8rem;
+    margin: 2rem 0 1rem;
+    font-weight: 600;
+}
+
+.location-info p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.location-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.location-info ul li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #eee;
+    font-size: 1rem;
+    color: #333;
+}
+
+.location-info ul li:last-child {
+    border-bottom: none;
+}
+
+.location-info ul li strong {
+    color: #d4af37;
+}
+
+/* Contact Card */
+.location-contact {
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+}
+
+.contact-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 1px solid #eee;
+}
+
+.contact-card h3 {
+    color: #1a1a1a;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.contact-item:last-of-type {
+    border-bottom: none;
+    margin-bottom: 2rem;
+}
+
+.contact-item i {
+    color: #d4af37;
+    font-size: 1.2rem;
+    margin-top: 0.2rem;
+    min-width: 20px;
+}
+
+.contact-item div {
+    flex: 1;
+}
+
+.contact-item strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+.contact-item a {
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+.full-width {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+/* Location Services Section */
+.location-services {
+    padding: 80px 20px;
+    background: white;
+}
+
+.location-services .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.location-services h2 {
+    text-align: center;
+    color: #1a1a1a;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.location-services > .container > p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.location-services .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.location-services .service-card {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.location-services .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.location-services .service-card i {
+    color: #d4af37;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.location-services .service-card h3 {
+    color: #1a1a1a;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.location-services .service-card p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+    padding: 80px 20px;
+    background: #f8f9fa;
+}
+
+.why-choose-us .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.why-choose-us h2 {
+    text-align: center;
+    color: #1a1a1a;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    font-weight: 700;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.feature-card i {
+    color: #d4af37;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+    color: #1a1a1a;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.feature-card p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 80px 20px;
+    background: white;
+}
+
+.testimonials .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonials h2 {
+    text-align: center;
+    color: #1a1a1a;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    font-weight: 700;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.testimonial-card {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid #eee;
+    position: relative;
+}
+
+.testimonial-card .stars {
+    color: #d4af37;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.testimonial-card p {
+    font-style: italic;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.testimonial-card cite {
+    color: #666;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Location CTA Section */
+.location-cta {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: white;
+    text-align: center;
+}
+
+.location-cta .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.location-cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.location-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.location-cta .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .location-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .location-hero .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .location-hero .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .location-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .location-contact {
+        position: static;
+    }
+    
+    .location-info h2 {
+        font-size: 2rem;
+    }
+    
+    .location-info h3 {
+        font-size: 1.5rem;
+    }
+    
+    .location-services h2,
+    .why-choose-us h2,
+    .testimonials h2,
+    .location-cta h2 {
+        font-size: 2rem;
+    }
+    
+    .features-grid,
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .location-services .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .location-hero {
+        padding: 100px 15px 60px;
+    }
+    
+    .location-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .location-details,
+    .location-services,
+    .why-choose-us,
+    .testimonials,
+    .location-cta {
+        padding: 60px 15px;
+    }
+    
+    .contact-card {
+        padding: 1.5rem;
+    }
+    
+    .location-cta .cta-buttons {
+        flex-direction: column;
+    }
 } 
