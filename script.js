@@ -45,6 +45,25 @@ function initializeNavigation() {
         });
     });
 
+    // Location-specific booking buttons
+    const locationBookButtons = document.querySelectorAll('.location-book-btn');
+    locationBookButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation(); // Prevent the parent link from triggering
+            
+            const location = button.getAttribute('data-location');
+            const phone = button.getAttribute('data-phone');
+            
+            // Navigate to the appropriate location page
+            if (location === 'sacramento') {
+                window.location.href = 'locations/sacramento.html';
+            } else if (location === 'rancho-cordova') {
+                window.location.href = 'locations/rancho-cordova.html';
+            }
+        });
+    });
+
     // Yelp popup functionality
     yelpButtons.forEach(button => {
         button.addEventListener('click', (e) => {
