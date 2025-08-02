@@ -6,6 +6,12 @@ Disallow: /admin/
 Disallow: /private/
 Disallow: /_*
 
+# Disallow problematic paths that don't exist
+Disallow: /services/
+Disallow: /blog/*/blog/
+Disallow: /blog/?category=
+Disallow: /blog/?page=
+
 # Allow all images for better SEO
 Allow: /images/
 Allow: /css/

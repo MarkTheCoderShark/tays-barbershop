@@ -531,4 +531,73 @@ footer {
     to {
         transform: rotate(360deg);
     }
+}
+
+/* 404 Error Page Styles */
+.error-section {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: white;
+}
+
+.error-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.error-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #ff6b35;
+}
+
+.error-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #e0e0e0;
+}
+
+.error-actions {
+    margin: 2rem 0;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.error-suggestions {
+    margin-top: 3rem;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.error-suggestions h3 {
+    margin-bottom: 1rem;
+    color: #ff6b35;
+}
+
+.error-suggestions ul {
+    list-style: none;
+    padding: 0;
+}
+
+.error-suggestions li {
+    margin-bottom: 0.5rem;
+}
+
+.error-suggestions a {
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.error-suggestions a:hover {
+    color: #ff6b35;
 } 
