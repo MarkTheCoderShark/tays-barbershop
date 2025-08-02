@@ -55,11 +55,11 @@ function initializeNavigation() {
             const location = button.getAttribute('data-location');
             const phone = button.getAttribute('data-phone');
             
-            // Navigate to the appropriate location page
+            // Navigate to Booksy booking for the appropriate location
             if (location === 'sacramento') {
-                window.location.href = 'locations/sacramento.html';
+                window.open('https://booksy.com/en-us/1032710_tays-barbershop-tahoe-park_barber-shop_134653_sacramento#ba_s=seo', '_blank');
             } else if (location === 'rancho-cordova') {
-                window.location.href = 'locations/rancho-cordova.html';
+                window.open('https://booksy.com/en-us/1187946_taysbarbershop_barber-shop_119564_rancho-cordova#ba_s=seo', '_blank');
             }
         });
     });
