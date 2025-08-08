@@ -18,3 +18,13 @@
   from = "/*"
   to = "/index.html"
   status = 200 
+
+[[redirects]]
+  from = "/blog/modern-haircut-trends-2024/"
+  to = "/blog/modern-haircut-trends-2025/"
+  status = 301
+
+[[redirects]]
+  from = "/blog/best-hair-products-men-2024/"
+  to = "/blog/best-hair-products-men-2025/"
+  status = 301 
