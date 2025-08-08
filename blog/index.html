@@ -40,21 +40,66 @@
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/popup.css">
     <link rel="stylesheet" href="../css/blog.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Booking Popup -->
+    <div class="popup-overlay" id="booking-popup">
+        <div class="popup-content">
+            <span class="popup-close">&times;</span>
+            <h2 class="popup-title">Choose Your Location</h2>
+            <div class="location-buttons">
+                <a href="https://booksy.com/en-us/1032710_tays-barbershop-tahoe-park_barber-shop_134653_sacramento#ba_s=seo" class="location-button" target="_blank">
+                    <h3>Sacramento</h3>
+                    <p>2992 65th St, Sacramento</p>
+                </a>
+                <a href="https://booksy.com/en-us/1187946_taysbarbershop_barber-shop_119564_rancho-cordova#ba_s=seo" class="location-button" target="_blank">
+                    <h3>Rancho Cordova</h3>
+                    <p>1963 Zinfandel Dr, Rancho Cordova</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Yelp Review Popup -->
+    <div class="popup-overlay" id="yelp-popup">
+        <div class="popup-content">
+            <span class="popup-close">&times;</span>
+            <h2 class="popup-title">Review Us on Yelp</h2>
+            <div class="location-buttons">
+                <a href="https://www.yelp.com/biz/tay-s-barbershop-sacramento?osq=tays+babershop" class="location-button" target="_blank">
+                    <h3>Sacramento</h3>
+                    <p>2992 65th St, Sacramento</p>
+                </a>
+                <a href="https://www.yelp.com/biz/tay-s-barbershop-rancho-cordova-rancho-cordova?osq=tays+babershop" class="location-button" target="_blank">
+                    <h3>Rancho Cordova</h3>
+                    <p>1963 Zinfandel Dr, Rancho Cordova</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar">
-        <a href="../index.html" class="logo">
+        <a href="../index.html#home" class="logo">
             <img src="../images/logo2.png" alt="Tay's Barbershop" class="nav-logo">
         </a>
+        <div class="mobile-menu-btn">
+            <i class="fas fa-bars fa-lg"></i>
+        </div>
         <div class="nav-links">
-            <a href="../index.html">Home</a>
+            <a href="../index.html#home">Home</a>
             <a href="../index.html#our-locations">Locations</a>
             <a href="../index.html#services">Services</a>
             <a href="../blog/">Blog</a>
-            <a href="../index.html#booking" class="btn">Book Now</a>
+            <a href="../index.html#book" class="btn">Book Now</a>
         </div>
     </nav>
 
@@ -80,7 +125,7 @@
                         <div class="post-content">
                             <div class="post-meta">
                                 <span class="category">Company News</span>
-                                <span class="date">December 30, 2024</span>
+                                <span class="date">August 8, 2025</span>
                             </div>
                             <h2><a href="new-website-launch/">Welcome to Our New Website!</a></h2>
                             <p>Discover the enhanced online experience at Tay's Barbershop Sacramento with our brand new website featuring online booking and comprehensive service information.</p>
@@ -96,7 +141,7 @@
                             <div class="post-content">
                                 <div class="post-meta">
                                     <span class="category">Haircut Techniques</span>
-                                    <span class="date">December 28, 2024</span>
+                                    <span class="date">August 6, 2025</span>
                                 </div>
                                 <h3><a href="professional-fade-techniques-sacramento/">Professional Fade Techniques Every Sacramento Man Should Know</a></h3>
                                 <p>Master the art of fade haircuts with our expert guide. Learn about different fade types, maintenance tips, and why Sacramento men love professional fades.</p>
@@ -111,7 +156,7 @@
                             <div class="post-content">
                                 <div class="post-meta">
                                     <span class="category">Beard Care</span>
-                                    <span class="date">December 25, 2024</span>
+                                    <span class="date">August 5, 2025</span>
                                 </div>
                                 <h3><a href="beard-care-guide-sacramento/">Ultimate Beard Care Guide for Sacramento Men</a></h3>
                                 <p>Keep your beard looking sharp with our professional grooming tips, product recommendations, and maintenance schedule.</p>
@@ -126,7 +171,7 @@
                             <div class="post-content">
                                 <div class="post-meta">
                                     <span class="category">Style Trends</span>
-                                    <span class="date">December 22, 2024</span>
+                                    <span class="date">August 4, 2025</span>
                                 </div>
                                 <h3><a href="modern-haircut-trends-2024/">2024's Hottest Men's Haircut Trends in Sacramento</a></h3>
                                 <p>Stay ahead of the style curve with this year's most popular men's haircuts and how to maintain them.</p>
@@ -136,12 +181,12 @@
 
                         <article class="blog-post-card">
                             <div class="post-image">
-                                <img src="../images/barber3_optimized.jpg" alt="Hair Care Products Sacramento" loading="lazy">
+                                <img src="../images/_DSF6034_optimized.jpg" alt="Hair Care Products Sacramento" loading="lazy">
                             </div>
                             <div class="post-content">
                                 <div class="post-meta">
                                     <span class="category">Product Reviews</span>
-                                    <span class="date">December 20, 2024</span>
+                                    <span class="date">August 3, 2025</span>
                                 </div>
                                 <h3><a href="best-hair-products-men-2024/">Best Hair Care Products for Men in 2024</a></h3>
                                 <p>Professional barber recommendations for pomades, waxes, and styling products that actually work.</p>
@@ -156,7 +201,7 @@
                             <div class="post-content">
                                 <div class="post-meta">
                                     <span class="category">Kids Cuts</span>
-                                    <span class="date">December 18, 2024</span>
+                                    <span class="date">August 2, 2025</span>
                                 </div>
                                 <h3><a href="kids-haircut-tips-sacramento/">Kids' Haircut Tips: Making It Fun and Stress-Free</a></h3>
                                 <p>Expert advice for parents on preparing kids for haircuts and choosing age-appropriate styles in Sacramento.</p>
@@ -171,7 +216,7 @@
                             <div class="post-content">
                                 <div class="post-meta">
                                     <span class="category">Barbershop Culture</span>
-                                    <span class="date">December 15, 2024</span>
+                                    <span class="date">August 1, 2025</span>
                                 </div>
                                 <h3><a href="barbershop-experience-guide/">What to Expect at a Professional Barbershop</a></h3>
                                 <p>First-time barbershop visitor? Learn about services, etiquette, and how to get the best experience.</p>
@@ -186,7 +231,7 @@
                             <div class="post-content">
                                 <div class="post-meta">
                                     <span class="category">Services</span>
-                                    <span class="date">December 12, 2024</span>
+                                    <span class="date">July 31, 2025</span>
                                 </div>
                                 <h3><a href="hot-towel-shave-benefits/">The Benefits of Professional Hot Towel Shaves</a></h3>
                                 <p>Discover why hot towel shaves are making a comeback and the benefits they offer for modern men.</p>
@@ -262,29 +307,55 @@
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer role="contentinfo" itemscope itemtype="https://schema.org/Organization">
         <div class="footer-content">
             <div class="footer-section">
-                <h3>Tay's Barbershop Blog</h3>
-                <p>Your source for professional barbering tips, men's grooming advice, and style inspiration from Sacramento's premier barbershop.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Our Locations</h3>
-                <p><strong>Sacramento:</strong> 2992 65th St<br>
-                <strong>Rancho Cordova:</strong> 1963 Zinfandel Dr</p>
-                <p>Open 7 Days a Week</p>
+                <h3 itemprop="name">Tay's Barbershop</h3>
+                <p itemprop="description">Professional cuts and styles in Sacramento. Experience the best in men's grooming at our two convenient locations.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/Taysbarbershop/" target="_blank" rel="noopener" aria-label="Follow us on Instagram" itemprop="sameAs">
+                        <i class="fab fa-instagram" aria-hidden="true"></i> @taysbarbershop
+                    </a>
+                    <a href="https://www.facebook.com/p/Tays-Barbershop-100093967770095/" target="_blank" rel="noopener" aria-label="Follow us on Facebook" itemprop="sameAs">
+                        <i class="fab fa-facebook" aria-hidden="true"></i> Tay's Barbershop
+                    </a>
+                    <a href="#yelp" class="yelp-review-btn" aria-label="Review us on Yelp">
+                        <i class="fab fa-yelp" aria-hidden="true"></i> Review Us on Yelp
+                    </a>
+                </div>
             </div>
             <div class="footer-section">
                 <h3>Quick Links</h3>
-                <a href="../index.html">Home</a>
-                <a href="../index.html#services">Services</a>
-                <a href="../locations/sacramento.html">Sacramento Location</a>
-                <a href="../locations/rancho-cordova.html">Rancho Cordova Location</a>
+                <nav aria-label="Footer navigation">
+                    <a href="../index.html#home" aria-label="Go to homepage">Home</a>
+                    <a href="../index.html#services" aria-label="View our services">Services</a>
+                    <a href="../locations/sacramento.html" aria-label="Sacramento barber location">Sacramento Barber</a>
+                    <a href="../locations/rancho-cordova.html" aria-label="Rancho Cordova barber shop">Rancho Cordova Barber</a>
+                    <a href="../blog/" aria-label="Barbering tips and grooming blog">Grooming Blog</a>
+                    <a href="../index.html#book" aria-label="Book appointment">Book Now</a>
+                </nav>
+            </div>
+            <div class="footer-section">
+                <h3>Hours & Contact</h3>
+                <p><i class="fas fa-clock" aria-hidden="true"></i> 
+                    <span itemprop="openingHours" content="Mo-Su 09:00-19:00">Open 7 Days a Week</span>
+                </p>
+                <p><i class="fas fa-phone" aria-hidden="true"></i> 
+                    Sacramento: <a href="tel:+19162222003" itemprop="telephone">(916) 222-2003</a>
+                </p>
+                <p><i class="fas fa-phone" aria-hidden="true"></i> 
+                    Rancho Cordova: <a href="tel:+19162220169" itemprop="telephone">(916) 222-0169</a>
+                </p>
+                <a href="../index.html#book" class="btn primary" aria-label="Book your appointment online">Book Your Appointment</a>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Tay's Barbershop. All rights reserved. | Professional barbering tips and men's grooming advice from Sacramento's top barbers.</p>
+            <p>&copy; 2025 <span itemprop="name">Tay's Barbershop</span>. All rights reserved. | 
+                <span itemprop="description">Professional Cuts & Styles in Sacramento & Rancho Cordova</span> | 
+                <a href="/sitemap.xml" rel="sitemap" type="application/xml">Sitemap</a>
+            </p>
         </div>
     </footer>
+<script src="../script.js"></script>
 </body>
 </html> 

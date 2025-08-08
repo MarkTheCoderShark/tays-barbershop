@@ -37,8 +37,8 @@
             "name": "Tay's Barbershop",
             "logo": "https://taysbarbershop.com/images/logo2_optimized.png"
         },
-        "datePublished": "2024-12-28",
-        "dateModified": "2024-12-28",
+        "datePublished": "2025-08-06",
+        "dateModified": "2025-08-06",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://taysbarbershop.com/blog/professional-fade-techniques-sacramento/"
@@ -50,21 +50,25 @@
     <link rel="stylesheet" href="../../css/base.css">
     <link rel="stylesheet" href="../../css/layout.css">
     <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/popup.css">
     <link rel="stylesheet" href="../../css/blog.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <a href="../../index.html" class="logo">
+        <a href="../../index.html#home" class="logo">
             <img src="../../images/logo2.png" alt="Tay's Barbershop" class="nav-logo">
         </a>
+        <div class="mobile-menu-btn">
+            <i class="fas fa-bars fa-lg"></i>
+        </div>
         <div class="nav-links">
-            <a href="../../index.html">Home</a>
+            <a href="../../index.html#home">Home</a>
             <a href="../../index.html#our-locations">Locations</a>
             <a href="../../index.html#services">Services</a>
             <a href="../../blog/">Blog</a>
-            <a href="../../index.html#booking" class="btn">Book Now</a>
+            <a href="../../index.html#book" class="btn">Book Now</a>
         </div>
     </nav>
 
@@ -73,7 +77,7 @@
         <div class="hero-content">
             <div class="article-meta">
                 <span class="category">Haircut Techniques</span>
-                <span class="date">December 28, 2024</span>
+                <span class="date">August 6, 2025</span>
                 <span class="read-time">5 min read</span>
             </div>
             <h1>Professional Fade Techniques Every Sacramento Man Should Know</h1>
@@ -211,34 +215,55 @@
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer role="contentinfo" itemscope itemtype="https://schema.org/Organization">
         <div class="footer-content">
             <div class="footer-section">
-                <h3>Tay's Barbershop Sacramento</h3>
-                <p>Professional fade techniques and expert barbering services at two convenient Sacramento area locations.</p>
+                <h3 itemprop="name">Tay's Barbershop</h3>
+                <p itemprop="description">Professional cuts and styles in Sacramento. Experience the best in men's grooming at our two convenient locations.</p>
                 <div class="social-links">
-                    <a href="https://www.instagram.com/Taysbarbershop/" target="_blank" rel="noopener">
-                        <i class="fab fa-instagram"></i> @taysbarbershop
+                    <a href="https://www.instagram.com/Taysbarbershop/" target="_blank" rel="noopener" aria-label="Follow us on Instagram" itemprop="sameAs">
+                        <i class="fab fa-instagram" aria-hidden="true"></i> @taysbarbershop
+                    </a>
+                    <a href="https://www.facebook.com/p/Tays-Barbershop-100093967770095/" target="_blank" rel="noopener" aria-label="Follow us on Facebook" itemprop="sameAs">
+                        <i class="fab fa-facebook" aria-hidden="true"></i> Tay's Barbershop
+                    </a>
+                    <a href="#yelp" class="yelp-review-btn" aria-label="Review us on Yelp">
+                        <i class="fab fa-yelp" aria-hidden="true"></i> Review Us on Yelp
                     </a>
                 </div>
             </div>
             <div class="footer-section">
-                <h3>Our Locations</h3>
-                <p><strong>Sacramento:</strong> 2992 65th St<br>
-                <strong>Rancho Cordova:</strong> 1963 Zinfandel Dr</p>
-                <p>Open 7 Days a Week</p>
+                <h3>Quick Links</h3>
+                <nav aria-label="Footer navigation">
+                    <a href="../../index.html#home" aria-label="Go to homepage">Home</a>
+                    <a href="../../index.html#services" aria-label="View our services">Services</a>
+                    <a href="../../locations/sacramento.html" aria-label="Sacramento barber location">Sacramento Barber</a>
+                    <a href="../../locations/rancho-cordova.html" aria-label="Rancho Cordova barber shop">Rancho Cordova Barber</a>
+                    <a href="../../blog/" aria-label="Barbering tips and grooming blog">Grooming Blog</a>
+                    <a href="../../index.html#book" aria-label="Book appointment">Book Now</a>
+                </nav>
             </div>
             <div class="footer-section">
-                <h3>Services</h3>
-                <a href="../../index.html#services">Professional Haircuts</a>
-                <a href="../../index.html#services">Fade Techniques</a>
-                <a href="../../index.html#services">Beard Trims</a>
-                <a href="../../index.html#services">Hot Towel Shaves</a>
+                <h3>Hours & Contact</h3>
+                <p><i class="fas fa-clock" aria-hidden="true"></i> 
+                    <span itemprop="openingHours" content="Mo-Su 09:00-19:00">Open 7 Days a Week</span>
+                </p>
+                <p><i class="fas fa-phone" aria-hidden="true"></i> 
+                    Sacramento: <a href="tel:+19162222003" itemprop="telephone">(916) 222-2003</a>
+                </p>
+                <p><i class="fas fa-phone" aria-hidden="true"></i> 
+                    Rancho Cordova: <a href="tel:+19162220169" itemprop="telephone">(916) 222-0169</a>
+                </p>
+                <a href="../../index.html#book" class="btn primary" aria-label="Book your appointment online">Book Your Appointment</a>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Tay's Barbershop. All rights reserved. | Professional fade techniques and expert barbering in Sacramento, CA.</p>
+            <p>&copy; 2025 <span itemprop="name">Tay's Barbershop</span>. All rights reserved. | 
+                <span itemprop="description">Professional Cuts & Styles in Sacramento & Rancho Cordova</span> | 
+                <a href="/sitemap.xml" rel="sitemap" type="application/xml">Sitemap</a>
+            </p>
         </div>
     </footer>
+    <script src="../../script.js"></script>
 </body>
 </html> 

@@ -43,8 +43,8 @@
             "name": "Tay's Barbershop",
             "logo": "https://taysbarbershop.com/images/logo2_optimized.png"
         },
-        "datePublished": "2024-12-30",
-        "dateModified": "2024-12-30",
+        "datePublished": "2025-08-08",
+        "dateModified": "2025-08-08",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://taysbarbershop.com/blog/new-website-launch/"
@@ -56,21 +56,66 @@
     <link rel="stylesheet" href="../../css/base.css">
     <link rel="stylesheet" href="../../css/layout.css">
     <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/popup.css">
     <link rel="stylesheet" href="../../css/blog.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Booking Popup -->
+    <div class="popup-overlay" id="booking-popup">
+        <div class="popup-content">
+            <span class="popup-close">&times;</span>
+            <h2 class="popup-title">Choose Your Location</h2>
+            <div class="location-buttons">
+                <a href="https://booksy.com/en-us/1032710_tays-barbershop-tahoe-park_barber-shop_134653_sacramento#ba_s=seo" class="location-button" target="_blank">
+                    <h3>Sacramento</h3>
+                    <p>2992 65th St, Sacramento</p>
+                </a>
+                <a href="https://booksy.com/en-us/1187946_taysbarbershop_barber-shop_119564_rancho-cordova#ba_s=seo" class="location-button" target="_blank">
+                    <h3>Rancho Cordova</h3>
+                    <p>1963 Zinfandel Dr, Rancho Cordova</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Yelp Review Popup -->
+    <div class="popup-overlay" id="yelp-popup">
+        <div class="popup-content">
+            <span class="popup-close">&times;</span>
+            <h2 class="popup-title">Review Us on Yelp</h2>
+            <div class="location-buttons">
+                <a href="https://www.yelp.com/biz/tay-s-barbershop-sacramento?osq=tays+babershop" class="location-button" target="_blank">
+                    <h3>Sacramento</h3>
+                    <p>2992 65th St, Sacramento</p>
+                </a>
+                <a href="https://www.yelp.com/biz/tay-s-barbershop-rancho-cordova-rancho-cordova?osq=tays+babershop" class="location-button" target="_blank">
+                    <h3>Rancho Cordova</h3>
+                    <p>1963 Zinfandel Dr, Rancho Cordova</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <a href="../../index.html" class="logo">
             <img src="../../images/logo2.png" alt="Tay's Barbershop" class="nav-logo">
         </a>
+        <div class="mobile-menu-btn">
+            <i class="fas fa-bars fa-lg"></i>
+        </div>
         <div class="nav-links">
-            <a href="../../index.html">Home</a>
+            <a href="../../index.html#home">Home</a>
             <a href="../../index.html#our-locations">Locations</a>
             <a href="../../index.html#services">Services</a>
             <a href="../../blog/">Blog</a>
-            <a href="../../index.html#booking" class="btn">Book Now</a>
+            <a href="../../index.html#book" class="btn">Book Now</a>
         </div>
     </nav>
 
@@ -79,7 +124,7 @@
         <div class="hero-content">
             <div class="article-meta">
                 <span class="category">Company News</span>
-                <span class="date">December 30, 2024</span>
+                <span class="date">August 8, 2025</span>
                 <span class="read-time">3 min read</span>
             </div>
             <h1>Welcome to Our New Website!</h1>
@@ -152,7 +197,7 @@
                 <div class="call-to-action">
                     <h3>Ready to Experience the New Tay's Barbershop?</h3>
                     <p>Book your appointment today and see the difference our new website makes in your barbershop experience.</p>
-                    <a href="../../index.html#booking" class="btn btn-primary">Book Your Appointment</a>
+                    <a href="../../index.html#book" class="btn btn-primary">Book Your Appointment</a>
                 </div>
 
                 <p><em>Thank you for being part of the Tay's Barbershop family. We look forward to serving you with the same dedication and quality that has made us Sacramento's trusted barbershop for years.</em></p>
@@ -169,7 +214,7 @@
                             </div>
                             <div class="post-content">
                                 <h4><a href="../professional-fade-techniques-sacramento/">Professional Fade Techniques Every Sacramento Man Should Know</a></h4>
-                                <span class="date">December 28, 2024</span>
+                                <span class="date">August 6, 2025</span>
                             </div>
                         </article>
                     </div>
@@ -185,31 +230,53 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <img src="../../images/logo2.png" alt="Tay's Barbershop" class="footer-logo">
-                    <p>Sacramento's premier barbershop offering professional cuts, fades, and grooming services.</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="../../index.html">Home</a></li>
-                        <li><a href="../../index.html#services">Services</a></li>
-                        <li><a href="../../index.html#our-locations">Locations</a></li>
-                        <li><a href="../../blog/">Blog</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact</h3>
-                    <p><a href="tel:+19165555555">(916) 555-5555</a></p>
-                    <p><a href="mailto:info@taysbarbershop.com">info@taysbarbershop.com</a></p>
+    <footer role="contentinfo" itemscope itemtype="https://schema.org/Organization">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 itemprop="name">Tay's Barbershop</h3>
+                <p itemprop="description">Professional cuts and styles in Sacramento. Experience the best in men's grooming at our two convenient locations.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/Taysbarbershop/" target="_blank" rel="noopener" aria-label="Follow us on Instagram" itemprop="sameAs">
+                        <i class="fab fa-instagram" aria-hidden="true"></i> @taysbarbershop
+                    </a>
+                    <a href="https://www.facebook.com/p/Tays-Barbershop-100093967770095/" target="_blank" rel="noopener" aria-label="Follow us on Facebook" itemprop="sameAs">
+                        <i class="fab fa-facebook" aria-hidden="true"></i> Tay's Barbershop
+                    </a>
+                    <a href="#yelp" class="yelp-review-btn" aria-label="Review us on Yelp">
+                        <i class="fab fa-yelp" aria-hidden="true"></i> Review Us on Yelp
+                    </a>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Tay's Barbershop. All rights reserved.</p>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <nav aria-label="Footer navigation">
+                    <a href="../../index.html#home" aria-label="Go to homepage">Home</a>
+                    <a href="../../index.html#services" aria-label="View our services">Services</a>
+                    <a href="../../locations/sacramento.html" aria-label="Sacramento barber location">Sacramento Barber</a>
+                    <a href="../../locations/rancho-cordova.html" aria-label="Rancho Cordova barber shop">Rancho Cordova Barber</a>
+                    <a href="../../blog/" aria-label="Barbering tips and grooming blog">Grooming Blog</a>
+                    <a href="../../index.html#book" aria-label="Book appointment">Book Now</a>
+                </nav>
             </div>
+            <div class="footer-section">
+                <h3>Hours & Contact</h3>
+                <p><i class="fas fa-clock" aria-hidden="true"></i> 
+                    <span itemprop="openingHours" content="Mo-Su 09:00-19:00">Open 7 Days a Week</span>
+                </p>
+                <p><i class="fas fa-phone" aria-hidden="true"></i> 
+                    Sacramento: <a href="tel:+19162222003" itemprop="telephone">(916) 222-2003</a>
+                </p>
+                <p><i class="fas fa-phone" aria-hidden="true"></i> 
+                    Rancho Cordova: <a href="tel:+19162220169" itemprop="telephone">(916) 222-0169</a>
+                </p>
+                <a href="../../index.html#book" class="btn primary" aria-label="Book your appointment online">Book Your Appointment</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 <span itemprop="name">Tay's Barbershop</span>. All rights reserved. | 
+                <span itemprop="description">Professional Cuts & Styles in Sacramento & Rancho Cordova</span> | 
+                <a href="/sitemap.xml" rel="sitemap" type="application/xml">Sitemap</a>
+            </p>
         </div>
     </footer>
 
