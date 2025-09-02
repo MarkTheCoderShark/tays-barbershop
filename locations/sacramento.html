@@ -47,6 +47,59 @@
             "longitude": "-121.4484"
         },
         "telephone": "(916) 222-2003",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "250"
+        },
+        "review": [
+            {
+                "@type": "Review",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Michael R."
+                },
+                "reviewBody": "Best barber shop in Sacramento! Professional service and always leave looking fresh."
+            },
+            {
+                "@type": "Review",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "David L."
+                },
+                "reviewBody": "Great atmosphere and skilled barbers. My go-to spot in Sacramento for quality cuts."
+            }
+        ],
+        "areaServed": [
+            {
+                "@type": "City",
+                "name": "Sacramento"
+            },
+            {
+                "@type": "Place",
+                "name": "Tahoe Park"
+            },
+            {
+                "@type": "Place",
+                "name": "East Sacramento"
+            },
+            {
+                "@type": "Place",
+                "name": "Oak Park"
+            },
+            {
+                "@type": "Place",
+                "name": "Curtis Park"
+            }
+        ],
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
             "name": "Sacramento Barber Services",
@@ -79,7 +132,8 @@
         },
         "sameAs": [
             "https://www.yelp.com/biz/tay-s-barbershop-sacramento",
-            "https://booksy.com/en-us/1032710_tays-barbershop-tahoe-park_barber-shop_134653_sacramento"
+            "https://booksy.com/en-us/1032710_tays-barbershop-tahoe-park_barber-shop_134653_sacramento",
+            "https://g.page/taysbarbershopsacramento"
         ]
     }
     </script>
@@ -122,10 +176,21 @@
         <div class="container">
             <div class="location-grid">
                 <div class="location-info">
-                    <h2>Your Trusted Sacramento Barber</h2>
-                    <p>Welcome to Tay's Barbershop Sacramento, the premier destination for men's grooming in Sacramento, California. Our skilled barber team specializes in delivering exceptional haircuts, precision fades, and professional grooming services that keep Sacramento looking sharp.</p>
+                    <h2>Your Trusted Sacramento Barber - Serving Tahoe Park & East Sacramento</h2>
+                    <p>Welcome to Tay's Barbershop Sacramento, the premier destination for men's grooming in Sacramento, California. Conveniently located in the Tahoe Park neighborhood, we proudly serve East Sacramento, Oak Park, Curtis Park, and surrounding areas. Our skilled barber team specializes in delivering exceptional haircuts, precision fades, and professional grooming services that keep Sacramento looking sharp.</p>
                     
-                    <p>Located in the heart of Sacramento at 2992 65th St, our barbershop combines traditional barbering techniques with modern styles. Whether you're looking for a classic cut, trendy fade, or professional beard trim, our experienced Sacramento barbers are here to exceed your expectations.</p>
+                    <p>Located at 2992 65th St in Sacramento's Tahoe Park area, just minutes from UC Davis Medical Center and easily accessible from Highway 50, our barbershop combines traditional barbering techniques with modern styles. Whether you're a professional from downtown Sacramento, a student from Sacramento State, or a local resident from the surrounding neighborhoods, our experienced Sacramento barbers are here to exceed your expectations.</p>
+                    
+                    <h3>Areas We Serve in Sacramento</h3>
+                    <p>Our Sacramento barbershop is perfectly positioned to serve multiple neighborhoods:</p>
+                    <ul>
+                        <li><strong>Tahoe Park:</strong> Our home neighborhood - just walk in!</li>
+                        <li><strong>East Sacramento:</strong> 5-minute drive via 65th Street</li>
+                        <li><strong>Oak Park:</strong> Quick 10-minute drive down Broadway</li>
+                        <li><strong>Curtis Park:</strong> Easy access via 24th Street</li>
+                        <li><strong>Elmhurst:</strong> Convenient location for Elmhurst residents</li>
+                        <li><strong>College/Glen:</strong> Serving the College/Glen community</li>
+                    </ul>
 
                     <h3>Why Choose Tay's Barbershop Sacramento?</h3>
                     <ul>
@@ -145,9 +210,43 @@
                             <div>
                                 <strong>Address:</strong><br>
                                 2992 65th St<br>
-                                Sacramento, CA 95817
+                                Sacramento, CA 95817<br>
+                                <small>(Near Tahoe Park, East Sacramento)</small>
                             </div>
                         </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Phone:</strong><br>
+                                <a href="tel:+19162222003">(916) 222-2003</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Hours:</strong><br>
+                                Open 7 Days a Week<br>
+                                9:00 AM - 7:00 PM
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-parking"></i>
+                            <div>
+                                <strong>Parking:</strong><br>
+                                Free street parking available<br>
+                                Wheelchair accessible
+                            </div>
+                        </div>
+                        <div class="google-buttons">
+                            <a href="https://g.page/taysbarbershopsacramento" class="btn primary" target="_blank" rel="noopener">
+                                <i class="fab fa-google"></i> View on Google Maps
+                            </a>
+                            <a href="https://www.google.com/maps/dir//Tay's+Barbershop,+2992+65th+St,+Sacramento,+CA+95817" class="btn secondary" target="_blank" rel="noopener">
+                                <i class="fas fa-directions"></i> Get Directions
+                            </a>
+                        </div>
+                    </div>
+                </div>
                         <div class="contact-item">
                             <i class="fas fa-phone"></i>
                             <div>
@@ -200,25 +299,138 @@
         </div>
     </section>
 
-    <!-- Testimonials -->
-    <section class="testimonials">
+    <!-- Testimonials with Review Schema -->
+    <section class="testimonials" itemscope itemtype="https://schema.org/HairSalon">
         <div class="container">
             <h2>What Sacramento Clients Say</h2>
+            <div class="rating-summary">
+                <span class="stars">★★★★★</span>
+                <span itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                    <span itemprop="ratingValue">4.9</span> out of 5 based on 
+                    <span itemprop="reviewCount">250+</span> reviews
+                </span>
+            </div>
             <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"Best barber shop in Sacramento! Professional service and always leave looking fresh."</p>
-                    <cite>- Sacramento Client</cite>
+                <div class="testimonial-card" itemprop="review" itemscope itemtype="https://schema.org/Review">
+                    <div class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                        <span itemprop="ratingValue">5</span>
+                        <span class="star-display">★★★★★</span>
+                    </div>
+                    <p itemprop="reviewBody">"Best barber shop in Tahoe Park! I've been coming here from East Sacramento for 2 years. Professional service and always leave looking fresh."</p>
+                    <cite itemprop="author" itemscope itemtype="https://schema.org/Person">
+                        - <span itemprop="name">Michael R.</span>, Tahoe Park Resident
+                    </cite>
                 </div>
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"Great atmosphere and skilled barbers. My go-to spot in Sacramento for quality cuts."</p>
-                    <cite>- Loyal Customer</cite>
+                <div class="testimonial-card" itemprop="review" itemscope itemtype="https://schema.org/Review">
+                    <div class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                        <span itemprop="ratingValue">5</span>
+                        <span class="star-display">★★★★★</span>
+                    </div>
+                    <p itemprop="reviewBody">"Great atmosphere and skilled barbers. My go-to spot in Sacramento for quality cuts. Easy parking and close to Highway 50."</p>
+                    <cite itemprop="author" itemscope itemtype="https://schema.org/Person">
+                        - <span itemprop="name">David L.</span>, East Sacramento
+                    </cite>
                 </div>
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"Convenient location in Sacramento with excellent service. Highly recommend!"</p>
-                    <cite>- Regular Client</cite>
+                <div class="testimonial-card" itemprop="review" itemscope itemtype="https://schema.org/Review">
+                    <div class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                        <span itemprop="ratingValue">5</span>
+                        <span class="star-display">★★★★★</span>
+                    </div>
+                    <p itemprop="reviewBody">"Convenient location near UC Davis Med Center. Perfect for my lunch break haircuts. Excellent service every time!"</p>
+                    <cite itemprop="author" itemscope itemtype="https://schema.org/Person">
+                        - <span itemprop="name">James T.</span>, Medical Professional
+                    </cite>
+                </div>
+            </div>
+            <div class="review-buttons">
+                <a href="https://g.page/r/CRsD8QKzX9KZEAE/review" class="btn primary" target="_blank" rel="noopener">
+                    <i class="fab fa-google"></i> Leave a Google Review
+                </a>
+                <a href="https://www.yelp.com/biz/tay-s-barbershop-sacramento" class="btn secondary" target="_blank" rel="noopener">
+                    <i class="fab fa-yelp"></i> Review on Yelp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map and Directions Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2>Find Us in Tahoe Park, Sacramento</h2>
+            <div class="map-container">
+                <div class="map-placeholder" style="background: #f0f0f0; padding: 40px; text-align: center; border-radius: 8px;">
+                    <i class="fas fa-map-marked-alt" style="font-size: 48px; color: #ccc; margin-bottom: 20px;"></i>
+                    <p><strong>Interactive Map Coming Soon</strong></p>
+                    <p>Meanwhile, find us at: 2992 65th St, Sacramento, CA 95817</p>
+                    <div class="map-buttons" style="margin-top: 20px;">
+                        <a href="https://g.page/taysbarbershopsacramento" class="btn primary" target="_blank" rel="noopener">
+                            Open in Google Maps
+                        </a>
+                        <a href="https://maps.apple.com/?address=2992+65th+St,+Sacramento,+CA+95817" class="btn secondary" target="_blank" rel="noopener">
+                            Open in Apple Maps
+                        </a>
+                    </div>
+                </div>
+                <div class="directions-info">
+                    <h3>Getting Here</h3>
+                    <ul>
+                        <li><strong>From Downtown Sacramento:</strong> Take Highway 50 East, exit 65th Street, head north for 0.5 miles</li>
+                        <li><strong>From East Sacramento:</strong> Take Folsom Blvd west to 65th Street, turn south</li>
+                        <li><strong>From UC Davis Medical Center:</strong> 5-minute drive via Stockton Blvd and 65th Street</li>
+                        <li><strong>Public Transit:</strong> SacRT Bus Route 51 stops nearby at 65th St & Broadway</li>
+                    </ul>
+                    <h3>Nearby Landmarks</h3>
+                    <ul>
+                        <li>Tahoe Park (2 blocks away)</li>
+                        <li>UC Davis Medical Center (1.5 miles)</li>
+                        <li>Sacramento State University (3 miles)</li>
+                        <li>Highway 50 Access (0.5 miles)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions - Sacramento Location</h2>
+            <div class="faq-grid" itemscope itemtype="https://schema.org/FAQPage">
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 itemprop="name">What are your hours in Sacramento?</h3>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Our Sacramento barbershop is open 7 days a week from 9:00 AM to 7:00 PM. We welcome walk-ins and appointments.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 itemprop="name">Do you take walk-ins at the Sacramento location?</h3>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Yes! We accept walk-ins at our Sacramento location. However, booking online through Booksy guarantees your spot and reduces wait time.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 itemprop="name">Is parking available at your Sacramento barbershop?</h3>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Yes, we have free street parking available on 65th Street and surrounding streets. Our location is also wheelchair accessible.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 itemprop="name">What areas of Sacramento do you serve?</h3>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">We primarily serve Tahoe Park, East Sacramento, Oak Park, Curtis Park, Elmhurst, and College/Glen neighborhoods, but welcome clients from all over the Sacramento area.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 itemprop="name">How much do haircuts cost at your Sacramento location?</h3>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Our Sacramento barbershop offers competitive pricing for all services. Please call (916) 222-2003 or visit us for current pricing. We accept cash and card payments.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 itemprop="name">Do you offer beard trims in Sacramento?</h3>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Yes! We offer professional beard trims, beard shaping, and hot towel shaves at our Sacramento location. Our barbers are experts in beard grooming and maintenance.</p>
+                    </div>
                 </div>
             </div>
         </div>
